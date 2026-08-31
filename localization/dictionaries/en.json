@@ -1,0 +1,15 @@
+{
+  "header": {
+    "name": "Victor M",
+    "navigationList": {
+      "work": "Work",
+      "services": "Services",
+      "about": "About",
+      "contact": "Contact",
+      "faq": "FAQ"
+    },
+    "cta": {
+      "startProject": "Start a project"
+    }
+  }
+}
