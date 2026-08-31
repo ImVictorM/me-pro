@@ -22,7 +22,6 @@ export default async function RootLayout({
   params,
 }: LayoutProps<"/[lang]">) {
   const { lang } = await params;
-  console.log(lang);
 
   return (
     <html

@@ -1,14 +1,14 @@
 import { match } from "@formatjs/intl-localematcher";
 import Negotiator from "negotiator";
 import { NextRequest, NextResponse } from "next/server";
+import { defaultLocale, locales } from "./localization";
 
-const locales = ["en-US", "pt-BR"];
+function getLocale(request: NextRequest) {
+  const headers = {
+    "accept-language": request.headers.get("accept-language") ?? "",
+  };
 
-function getLocale() {
-  const headers = { "accept-language": "pt-BR,pt;q=0.8,en-US;q=0.6,en;q=0.4" };
   const languages = new Negotiator({ headers }).languages();
-
-  const defaultLocale = locales[0];
 
   return match(languages, locales, defaultLocale);
 }
@@ -20,11 +20,19 @@ export default function Proxy(request: NextRequest) {
     (locale) => pathname.startsWith(`/${locale}/`) || pathname === `/${locale}`,
   );
 
+  console.log("pathnameHasLocale", pathnameHasLocale);
+
   if (pathnameHasLocale) return;
 
-  const locale = getLocale();
+  const locale = getLocale(request);
 
   request.nextUrl.pathname = `/${locale}${pathname}`;
 
   return NextResponse.redirect(request.nextUrl);
 }
+
+export const config = {
+  matcher: [
+    "/((?!api|_next/static|_next/image|favicon.ico|sitemap.xml|robots.txt).*)",
+  ],
+};

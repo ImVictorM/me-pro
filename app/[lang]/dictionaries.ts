@@ -2,19 +2,20 @@ import { lang } from "next/root-params";
 import { notFound } from "next/navigation";
 
 const dicts = {
-  en: () =>
-    import("@/localization/dictionaries/en.json").then(
+  "en-US": () =>
+    import("@/localization/dictionaries/en-us.json").then(
       (module) => module.default,
     ),
-  ptBr: () =>
+  "pt-BR": () =>
     import("@/localization/dictionaries/pt-br.json").then(
       (module) => module.default,
     ),
 };
 
-export type Locale = keyof typeof dicts;
+export type LocaleDictionary = keyof typeof dicts;
 
-export const hasLocale = (locale: string): locale is Locale => locale in dicts;
+export const hasLocale = (locale: string): locale is LocaleDictionary =>
+  locale in dicts;
 
 export const getDictionary = async () => {
   const locale = await lang();
