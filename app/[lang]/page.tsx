@@ -44,7 +44,7 @@ export default async function Home() {
         </div>
 
         <div>
-          <button>Começar um projeto</button>
+          <button>{dict.header.cta.startProject}</button>
         </div>
       </header>
 

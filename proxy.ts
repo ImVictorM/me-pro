@@ -20,8 +20,6 @@ export default function Proxy(request: NextRequest) {
     (locale) => pathname.startsWith(`/${locale}/`) || pathname === `/${locale}`,
   );
 
-  console.log("pathnameHasLocale", pathnameHasLocale);
-
   if (pathnameHasLocale) return;
 
   const locale = getLocale(request);
@@ -32,7 +30,5 @@ export default function Proxy(request: NextRequest) {
 }
 
 export const config = {
-  matcher: [
-    "/((?!api|_next/static|_next/image|favicon.ico|sitemap.xml|robots.txt).*)",
-  ],
+  matcher: ["/((?!_next).*)"],
 };
