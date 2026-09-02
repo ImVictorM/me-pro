@@ -1,54 +1,51 @@
-import Link from "next/link";
+import { Button } from "@/components/ui/button";
 import { getDictionary } from "./dictionaries";
+import { ScrollableWrapper, Header } from "@/components/Header";
 
 export default async function Home() {
   const dict = await getDictionary();
 
   return (
     <div>
-      <header>
-        <div>
-          <p>{dict.header.name}</p>
-        </div>
+      <ScrollableWrapper>
+        <Header />
+      </ScrollableWrapper>
 
-        <div>
-          <nav>
-            <ul>
-              <li>
-                <Link prefetch={false} href="#">
-                  {dict.header.navigationList.work}
-                </Link>
-              </li>
-              <li>
-                <Link prefetch={false} href="#">
-                  {dict.header.navigationList.services}
-                </Link>
-              </li>
-              <li>
-                <Link prefetch={false} href="#">
-                  {dict.header.navigationList.about}
-                </Link>
-              </li>
-              <li>
-                <Link prefetch={false} href="#">
-                  {dict.header.navigationList.contact}
-                </Link>
-              </li>
-              <li>
-                <Link prefetch={false} href="#">
-                  {dict.header.navigationList.faq}
-                </Link>
-              </li>
-            </ul>
-          </nav>
-        </div>
+      <main className="flex flex-col px-8">
+        {/* Hero */}
+        <section className="min-h-screen flex flex-col  justify-center gap-8">
+          <h1 className="text-7xl font-bold leading-none">{dict.hero.title}</h1>
+          <p className="text-2xl text-muted-foreground leading-relaxed font-light">
+            {dict.hero.subtitle}
+          </p>
 
-        <div>
-          <button>{dict.header.cta.startProject}</button>
-        </div>
-      </header>
+          <div className="flex gap-4 mt-4">
+            <Button className="text-lg px-8 py-7" type="button">
+              {dict.hero.cta.primaryAction}
+            </Button>
+            <Button
+              className="text-lg px-8 py-7"
+              type="button"
+              variant="outline"
+            >
+              {dict.hero.cta.secondaryAction}
+            </Button>
+          </div>
+        </section>
 
-      <main></main>
+        {/* Services */}
+        <section>
+          <h2>{dict.services.title}</h2>
+          <ul>
+            {dict.services.items.map((service, index) => (
+              <li key={index}>
+                <h3>{service.title}</h3>
+                <p>{service.description}</p>
+              </li>
+            ))}
+          </ul>
+        </section>
+      </main>
     </div>
   );
 }
