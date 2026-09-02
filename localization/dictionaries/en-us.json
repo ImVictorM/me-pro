@@ -11,5 +11,132 @@
     "cta": {
       "startProject": "Start a project"
     }
-  }
+  },
+  "hero": {
+    "title": "Digital solution for your business",
+    "subtitle": "Websites, systems and applications developed according to the needs of your business",
+    "cta": {
+      "primaryAction": "Start a project",
+      "secondaryAction": "View projects"
+    }
+  },
+  "services": {
+    "title": "Services",
+    "items": [
+      {
+        "title": "Websites for conversion",
+        "description": "Institutional sites and landing pages optimized for conversion and performance"
+      },
+      {
+        "title": "Web applications and custom systems",
+        "description": "Custom software solutions to meet your business's specific needs"
+      },
+      {
+        "title": "Mobile applications",
+        "description": "Development of applications for Android ready to be published"
+      },
+      {
+        "title": "System updates and maintenance",
+        "description": "Already have something ready? I can improve it, fix bugs, performance issues, interface and help your product evolve"
+      }
+    ]
+  },
+  "projects": [
+    {
+      "title": "Cantinho dos bordados",
+      "description": "Landing page for local business of custom embroidery",
+      "role": "Freelance Developer",
+      "subject": "Landing page"
+    },
+    {
+      "title": "Meerkat",
+      "description": "Marketplace focado em eletrônicos com camada de segurança entre negociações",
+      "role": "Full Stack Developer",
+      "subject": "Marketplace"
+    },
+    {
+      "title": "Tocata",
+      "description": "Music application for mobile devices",
+      "role": "Freelance Developer",
+      "subject": "Mobile"
+    },
+    {
+      "title": "ECommerce management",
+      "description": "API for managing online commerce following best practices of architecture",
+      "role": "Back-End Developer",
+      "subject": "Architectural Study"
+    },
+    {
+      "title": "Me android",
+      "description": "Interactive portfolio inspired by the design of Nier:Automata",
+      "role": "Front-End Developer",
+      "subject": "Interactive Portfolio"
+    },
+    {
+      "title": "Trivia game",
+      "description": "Web game in the quiz style with various topics and local ranking",
+      "role": "Front-End Developer",
+      "subject": "Web Game"
+    }
+  ],
+  "About": {
+    "benefitsSection": {
+      "title": "Why work with me",
+      "benefits": [
+        {
+          "description": "Direct contact with the person who develops your solution"
+        },
+        {
+          "description": "Fast decisions and changes, without bureaucratic layers"
+        },
+        {
+          "description": "Transparent pricing, without unexpected costs"
+        },
+        {
+          "description": "Use of optimized technologies for current scenarios"
+        }
+      ]
+    },
+    "workProcessSection": {
+      "title": "From the first message to project delivery",
+      "items": [
+        {
+          "title": "Project understanding",
+          "description": "Share basic information about your business and project goals"
+        },
+        {
+          "title": "Initial Planning",
+          "description": "Alignment of expectations using a basic document with the project scope"
+        },
+        {
+          "title": "Construction",
+          "description": "Development of the project according to the initial planning"
+        },
+        {
+          "title": "Frequent Updates",
+          "description": "Regular interactions to ensure the project is in line with your expectations"
+        },
+        {
+          "title": "Delivery",
+          "description": "Release of the completed and tested project"
+        },
+        {
+          "title": "Post-Delivery Relationship",
+          "description": "Hosting, continuous support, and maintenance after the project delivery"
+        }
+      ]
+    }
+  },
+
+  "faq": {
+    "title": "Frequently asked questions",
+    "questions": []
+  },
+
+  "contact": {
+    "title": "",
+    "form": {}
+  },
+
+  "footer": {}
 }

@@ -11,5 +11,132 @@
     "cta": {
       "startProject": "Começar um projeto"
     }
-  }
+  },
+  "hero": {
+    "title": "Solução digital para o seu negócio",
+    "subtitle": "Websites, sistemas e aplicativos desenvolvidos de acordo com as necessidades do seu negócio",
+    "cta": {
+      "primaryAction": "Começar um projeto",
+      "secondaryAction": "Ver projetos"
+    }
+  },
+  "services": {
+    "title": "Serviços",
+    "items": [
+      {
+        "title": "Websites para conversão",
+        "description": "Sites institucionais e landing pages otimizados para conversão e performance"
+      },
+      {
+        "title": "Aplicativos web e sistemas sob medida",
+        "description": "Soluções de software personalizadas para atender às necessidades específicas do seu negócio"
+      },
+      {
+        "title": "Aplicativos mobile",
+        "description": "Desenvolvimento de aplicativos para Android prontos para serem publicados"
+      },
+      {
+        "title": "Atualização e manutenção de sistemas",
+        "description": "já tem algo pronto? posso melhorá-lo, consertar bugs, problemas de performance, interface e ajudar seu produto evoluir"
+      }
+    ]
+  },
+  "projects": [
+    {
+      "title": "Cantinho dos bordados",
+      "description": "Landing page para negócio local de bordados personalizados",
+      "role": "Desenvolvedor autônomo",
+      "subject": "Landing page"
+    },
+    {
+      "title": "Meerkat",
+      "description": "Marketplace focado em eletrônicos com camada de segurança entre negociações",
+      "role": "Desenvolvedor Full Stack",
+      "subject": "Marketplace"
+    },
+    {
+      "title": "Tocata",
+      "description": "Aplicativo de música para dispositivos móveis",
+      "role": "Desenvolvedor autônomo",
+      "subject": "Mobile"
+    },
+    {
+      "title": "ECommerce management",
+      "description": "API para gestão de comércio eletrônico seguindo boas práticas de arquitetura",
+      "role": "Desenvolvedor back-end",
+      "subject": "Estudo arquitetural"
+    },
+    {
+      "title": "Me android",
+      "description": "Portfólio interativo inspirado no ema de Nier:Automata",
+      "role": "Desenvolvedor front-end",
+      "subject": "Portfólio interativo"
+    },
+    {
+      "title": "Trivia game",
+      "description": "Jogo web no estilo quiz com tópicos variados e ranking local",
+      "role": "Desenvolvedor front-end",
+      "subject": "Jogo web"
+    }
+  ],
+  "About": {
+    "benefitsSection": {
+      "title": "Por quê trabalhar comigo",
+      "benefits": [
+        {
+          "description": "Contato direto com a pessoa que desenvolve sua solução"
+        },
+        {
+          "description": "Decisões e mudanças rápidas, sem camadas burocráticas"
+        },
+        {
+          "description": "Preço transparente, sem custos inesperados"
+        },
+        {
+          "description": "Uso de tecnologias otimizadas para cenários atuais"
+        }
+      ]
+    },
+    "workProcessSection": {
+      "title": "Da primeira mensagem à entrega do projeto",
+      "items": [
+        {
+          "title": "Compreensão do projeto",
+          "description": "Compartilhe informações básicas sobre seu negócio e objetivos do projeto"
+        },
+        {
+          "title": "Planejamento inicial",
+          "description": "Alinhamento de expectativas utilizando documento básico com o escopo do projeto"
+        },
+        {
+          "title": "Construção",
+          "description": "Desenvolvimento do projeto de acordo com o planejamento inicial"
+        },
+        {
+          "title": "Atualizações frequentes",
+          "description": "Interações regulares para garantir que o projeto esteja de acordo com suas expectativas"
+        },
+        {
+          "title": "Entrega",
+          "description": "Liberação do projeto finalizado e testado"
+        },
+        {
+          "title": "Relacionamento pós-entrega",
+          "description": "Hospedagem, suporte contínuo e manutenção após a entrega do projeto"
+        }
+      ]
+    }
+  },
+
+  "faq": {
+    "title": "Perguntas frequentes",
+    "questions": []
+  },
+
+  "contact": {
+    "title": "",
+    "form": {}
+  },
+
+  "footer": {}
 }
