@@ -41,59 +41,66 @@
       }
     ]
   },
-  "projects": [
-    {
-      "title": "Cantinho dos bordados",
-      "description": "Landing page para negócio local de bordados personalizados",
-      "role": "Desenvolvedor autônomo",
-      "subject": "Landing page"
-    },
-    {
-      "title": "Meerkat",
-      "description": "Marketplace focado em eletrônicos com camada de segurança entre negociações",
-      "role": "Desenvolvedor Full Stack",
-      "subject": "Marketplace"
-    },
-    {
-      "title": "Tocata",
-      "description": "Aplicativo de música para dispositivos móveis",
-      "role": "Desenvolvedor autônomo",
-      "subject": "Mobile"
-    },
-    {
-      "title": "ECommerce management",
-      "description": "API para gestão de comércio eletrônico seguindo boas práticas de arquitetura",
-      "role": "Desenvolvedor back-end",
-      "subject": "Estudo arquitetural"
-    },
-    {
-      "title": "Me android",
-      "description": "Portfólio interativo inspirado no ema de Nier:Automata",
-      "role": "Desenvolvedor front-end",
-      "subject": "Portfólio interativo"
-    },
-    {
-      "title": "Trivia game",
-      "description": "Jogo web no estilo quiz com tópicos variados e ranking local",
-      "role": "Desenvolvedor front-end",
-      "subject": "Jogo web"
-    }
-  ],
-  "About": {
+  "projects": {
+    "title": "Trabalhos selecionados",
+    "items": [
+      {
+        "title": "Cantinho dos bordados",
+        "description": "Landing page para negócio local de bordados personalizados",
+        "role": "Desenvolvedor autônomo",
+        "subject": "Landing page"
+      },
+      {
+        "title": "Meerkat",
+        "description": "Marketplace focado em eletrônicos com camada de segurança entre negociações",
+        "role": "Desenvolvedor Full Stack",
+        "subject": "Marketplace"
+      },
+      {
+        "title": "Tocata",
+        "description": "Aplicativo de música para dispositivos móveis",
+        "role": "Desenvolvedor autônomo",
+        "subject": "Mobile"
+      },
+      {
+        "title": "ECommerce management",
+        "description": "API para gestão de comércio eletrônico seguindo boas práticas de arquitetura",
+        "role": "Desenvolvedor back-end",
+        "subject": "Estudo arquitetural"
+      },
+      {
+        "title": "Me android",
+        "description": "Portfólio interativo inspirado no ema de Nier:Automata",
+        "role": "Desenvolvedor front-end",
+        "subject": "Portfólio interativo"
+      },
+      {
+        "title": "Trivia game",
+        "description": "Jogo web no estilo quiz com tópicos variados e ranking local",
+        "role": "Desenvolvedor front-end",
+        "subject": "Jogo web"
+      }
+    ]
+  },
+  "about": {
     "benefitsSection": {
-      "title": "Por quê trabalhar comigo",
+      "title": "Por que trabalhar comigo",
       "benefits": [
         {
-          "description": "Contato direto com a pessoa que desenvolve sua solução"
+          "title": "Comunicação direta",
+          "description": "Fale diretamente com a pessoa responsável por desenvolver sua solução"
         },
         {
-          "description": "Decisões e mudanças rápidas, sem camadas burocráticas"
+          "title": "Decisões mais rápidas",
+          "description": "Tome decisões e faça ajustes com agilidade, sem camadas burocráticas desnecessárias"
         },
         {
-          "description": "Preço transparente, sem custos inesperados"
+          "title": "Preços transparentes",
+          "description": "Custos do projeto definidos com clareza desde o início, sem cobranças inesperadas"
         },
         {
-          "description": "Uso de tecnologias otimizadas para cenários atuais"
+          "title": "Soluções modernas",
+          "description": "Tecnologias escolhidas de acordo com as necessidades do seu projeto"
         }
       ]
     },
@@ -101,28 +108,28 @@
       "title": "Da primeira mensagem à entrega do projeto",
       "items": [
         {
-          "title": "Compreensão do projeto",
-          "description": "Compartilhe informações básicas sobre seu negócio e objetivos do projeto"
+          "title": "Entendimento do projeto",
+          "description": "Compartilhe informações básicas sobre seu negócio, suas necessidades e os objetivos do projeto"
         },
         {
           "title": "Planejamento inicial",
-          "description": "Alinhamento de expectativas utilizando documento básico com o escopo do projeto"
+          "description": "Alinhamento de expectativas por meio de um documento simples com o escopo do projeto"
         },
         {
-          "title": "Construção",
-          "description": "Desenvolvimento do projeto de acordo com o planejamento inicial"
+          "title": "Desenvolvimento",
+          "description": "Construção do projeto de acordo com o escopo e os requisitos definidos"
         },
         {
           "title": "Atualizações frequentes",
-          "description": "Interações regulares para garantir que o projeto esteja de acordo com suas expectativas"
+          "description": "Atualizações regulares e oportunidades de feedback para manter o projeto alinhado às suas expectativas"
         },
         {
           "title": "Entrega",
-          "description": "Liberação do projeto finalizado e testado"
+          "description": "Entrega do projeto concluído, testado e pronto para uso"
         },
         {
           "title": "Relacionamento pós-entrega",
-          "description": "Hospedagem, suporte contínuo e manutenção após a entrega do projeto"
+          "description": "Hospedagem opcional, suporte contínuo, manutenção e futuras melhorias após a entrega"
         }
       ]
     }
