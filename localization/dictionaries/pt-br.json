@@ -141,8 +141,58 @@
   },
 
   "contact": {
-    "title": "",
-    "form": {}
+    "form": {
+      "title": "Conte-me sua ideia",
+      "data": {
+        "email": "E-mail",
+        "phone": "WhatsApp",
+        "location": "Localização",
+        "country": "Brasil"
+      },
+      "fullname": {
+        "label": "Nome completo",
+        "placeholder": "Insira seu nome completo",
+        "minError": "O nome completo deve ter pelo menos {min} caracteres",
+        "maxError": "O nome completo deve ter no máximo {max} caracteres"
+      },
+      "email": {
+        "label": "E-mail",
+        "placeholder": "voce@exemplo.com",
+        "invalidError": "Insira um endereço de e-mail válido"
+      },
+      "projectType": {
+        "label": "Tipo de projeto",
+        "placeholder": "Selecione um tipo de projeto",
+        "options": {
+          "landing-page": "Landing page",
+          "website": "Site personalizado",
+          "ecommerce": "E-commerce",
+          "web-app": "Aplicação web",
+          "mobile": "Aplicativo mobile",
+          "automation": "Automação",
+          "other": "Outro"
+        }
+      },
+      "approximateInvestment": {
+        "label": "Investimento aproximado",
+        "placeholder": "Selecione uma faixa",
+        "options": {
+          "under-1k": "Até R$1.000,00",
+          "1-5k": "R$1.000,00 a R$5.000,00",
+          "5k-10k": "R$5.000,00 a R$10.000,00",
+          "10k-20k": "R$10.000,00 a R$20.000,00",
+          "20k-plus": "Mais de R$20.000,00",
+          "not-sure": "Ainda não tenho certeza"
+        }
+      },
+      "projectDetails": {
+        "label": "Detalhes do projeto",
+        "placeholder": "Conte um pouco sobre o seu projeto...",
+        "minError": "Os detalhes do projeto devem ter pelo menos {min} caracteres",
+        "maxError": "Os detalhes do projeto devem ter no máximo {max} caracteres"
+      },
+      "submit": "Enviar mensagem"
+    }
   },
 
   "footer": {}

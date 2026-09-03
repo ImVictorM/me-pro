@@ -138,9 +138,9 @@
   @apply py-24 px-8;
 }
 
-@utility section-title {
-  @apply relative w-full text-4xl font-bold mb-14;
-
+@utility dash {
+  @apply relative;
+  
   &::after {
     position: absolute;
     left: 0;
@@ -152,4 +152,11 @@
     background-color: var(--color-primary);
   }
 }
+
+@utility section-title {
+  @apply w-full text-4xl font-bold mb-14;
+  @apply dash;
+}
+
+
 

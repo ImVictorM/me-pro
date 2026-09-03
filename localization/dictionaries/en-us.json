@@ -141,8 +141,58 @@
   },
 
   "contact": {
-    "title": "Tell me your idea",
-    "form": {}
+    "form": {
+      "title": "Tell me your idea",
+      "data": {
+        "email": "Email",
+        "phone": "WhatsApp",
+        "location": "Location",
+        "country": "Brazil"
+      },
+      "fullname": {
+        "label": "Full name",
+        "placeholder": "Insert your full name",
+        "minError": "Full name should be at least {min} characters long",
+        "maxError": "Full name should be at most {max} characters long"
+      },
+      "email": {
+        "label": "Email",
+        "placeholder": "you@example.com",
+        "invalidError": "Enter a valid email address"
+      },
+      "projectType": {
+        "label": "Project type",
+        "placeholder": "Select a project type",
+        "options": {
+          "landing-page": "Landing page",
+          "website": "Custom website",
+          "ecommerce": "E-commerce",
+          "web-app": "Web application",
+          "mobile": "Mobile application",
+          "automation": "Automation",
+          "other": "Other"
+        }
+      },
+      "approximateInvestment": {
+        "label": "Approximate investment",
+        "placeholder": "Select a range",
+        "options": {
+          "under-1k": "Up to R$1.000,00",
+          "1-5k": "R$1.000,00 to R$5.000,00",
+          "5k-10k": "R$5.000,00 - R$10.000,00",
+          "10k-20k": "R$10.000,00 - R$20.000,00",
+          "20k-plus": "More than R$20.000,00",
+          "not-sure": "I'm not sure yet"
+        }
+      },
+      "projectDetails": {
+        "label": "Project details",
+        "placeholder": "Tell me a little about your project...",
+        "minError": "Project details should be at least {min} characters long",
+        "maxError": "Project details should be at most {max} characters long"
+      },
+      "submit": "Send message"
+    }
   },
 
   "footer": {}

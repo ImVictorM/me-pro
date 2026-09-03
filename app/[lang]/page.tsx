@@ -152,8 +152,8 @@ export default async function Home() {
         </section>
 
         {/* Contact */}
-        <section>
-          <ContactForm />
+        <section className="section">
+          <ContactForm dictionary={dict.contact.form} />
         </section>
       </main>
 

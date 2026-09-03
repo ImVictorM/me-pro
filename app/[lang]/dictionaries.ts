@@ -14,6 +14,10 @@ const dicts = {
 
 export type LocaleDictionary = keyof typeof dicts;
 
+type Dictionary = Awaited<ReturnType<(typeof dicts)["en-US"]>>;
+
+export type ContactFormDictionary = Dictionary["contact"]["form"];
+
 export const hasLocale = (locale: string): locale is LocaleDictionary =>
   locale in dicts;
 
