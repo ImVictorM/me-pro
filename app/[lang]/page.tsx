@@ -13,6 +13,18 @@ import Image from "next/image";
 import { Badge } from "@/components/ui/badge";
 import placeholderImg from "@/assets/images/placeholder.png";
 import { ContactForm } from "@/components/ContactForm";
+import { contact, copyrightYear } from "@/data";
+import LinkedInIcon from "@/assets/icons/LinkedInIcon";
+import GitHubIcon from "@/assets/icons/GitHubIcon";
+
+export const APP_SECTIONS = {
+  hero: "hero",
+  services: "services",
+  projects: "projects",
+  benefits: "benefits",
+  workProcess: "workProcess",
+  contact: "contact",
+} as const;
 
 export default async function Home() {
   const dict = await getDictionary();
@@ -25,7 +37,10 @@ export default async function Home() {
 
       <main className="flex flex-col gap-10">
         {/* Hero */}
-        <section className="section min-h-screen flex flex-col justify-center gap-8">
+        <section
+          id={APP_SECTIONS.hero}
+          className="section min-h-screen flex flex-col justify-center gap-8"
+        >
           <h1 className="text-7xl font-bold leading-none">{dict.hero.title}</h1>
           <p className="text-2xl text-muted-foreground leading-relaxed font-light">
             {dict.hero.subtitle}
@@ -46,7 +61,7 @@ export default async function Home() {
         </section>
 
         {/* Services */}
-        <section className="section">
+        <section id={APP_SECTIONS.services} className="section">
           <h2 className="section-title">{dict.services.title}</h2>
 
           <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -68,7 +83,7 @@ export default async function Home() {
         </section>
 
         {/* Projects */}
-        <div className="bg-surface">
+        <div id={APP_SECTIONS.projects} className="bg-surface">
           <section className="section">
             <h2 className="section-title">{dict.projects.title}</h2>
 
@@ -104,7 +119,10 @@ export default async function Home() {
         </div>
 
         {/* About 1 */}
-        <section className="section max-w-225 mx-auto">
+        <section
+          id={APP_SECTIONS.benefits}
+          className="section max-w-225 mx-auto"
+        >
           <h2 className="flex justify-center">
             <span className="block w-fit section-title">
               {dict.about.benefitsSection.title}
@@ -129,7 +147,7 @@ export default async function Home() {
         </section>
 
         {/* About 2 */}
-        <section className="section">
+        <section id={APP_SECTIONS.workProcess} className="section">
           <h2 className="section-title">
             {dict.about.workProcessSection.title}
           </h2>
@@ -152,12 +170,41 @@ export default async function Home() {
         </section>
 
         {/* Contact */}
-        <section className="section">
+        <section
+          id={APP_SECTIONS.contact}
+          className="section flex justify-center"
+        >
           <ContactForm dictionary={dict.contact.form} />
         </section>
       </main>
 
-      <footer className="mt-50">Footer</footer>
+      <footer className="border-t py-8">
+        <div className="mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col gap-4 items-center justify-center sm:flex-row sm:justify-between">
+            <p className="text-muted-foreground text-sm">
+              {copyrightYear} Victor Mendes · {dict.contact.form.data.country}
+            </p>
+
+            <nav className="flex flex-row gap-3">
+              <a
+                className="text-muted-foreground hover:text-primary transition-all"
+                href={contact.social.linkedIn}
+                target="_blank"
+              >
+                <LinkedInIcon className="size-5" />
+              </a>
+
+              <a
+                className="text-muted-foreground hover:text-primary transition-all"
+                href={contact.social.github}
+                target="_blank"
+              >
+                <GitHubIcon className="size-5" />
+              </a>
+            </nav>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 }

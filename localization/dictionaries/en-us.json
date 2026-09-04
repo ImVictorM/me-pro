@@ -143,6 +143,7 @@
   "contact": {
     "form": {
       "title": "Tell me your idea",
+      "description": "Tell me what you need and a little about your project. I'll get back to you with the next steps and how I can help",
       "data": {
         "email": "Email",
         "phone": "WhatsApp",

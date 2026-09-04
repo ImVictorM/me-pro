@@ -143,6 +143,7 @@
   "contact": {
     "form": {
       "title": "Conte-me sua ideia",
+      "description": "Conte o que você precisa e um pouco sobre o seu projeto. Entrarei em contato com os próximos passos e como posso ajudar",
       "data": {
         "email": "E-mail",
         "phone": "WhatsApp",

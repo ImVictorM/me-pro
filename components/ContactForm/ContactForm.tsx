@@ -16,13 +16,7 @@ import {
 } from "@/components/ui/field";
 
 import { Input } from "@/components/ui/input";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
+import { Card, CardContent } from "@/components/ui/card";
 
 import {
   Select,
@@ -36,6 +30,8 @@ import { Textarea } from "@/components/ui/textarea";
 
 import { type ContactFormValues, createFormSchema } from "./formSchema";
 import { contact } from "@/data";
+import GitHubIcon from "@/assets/icons/GitHubIcon";
+import LinkedInIcon from "@/assets/icons/LinkedInIcon";
 
 type ContactFormProps = {
   dictionary: ContactFormDictionary;
@@ -58,34 +54,17 @@ export default function ContactForm({ dictionary }: ContactFormProps) {
   }
 
   return (
-    <Card>
-      <CardHeader>
-        <CardTitle className="text-4xl dash mb-8">
-          <h2>{dictionary.title}</h2>
-        </CardTitle>
-        <CardDescription>placeholder</CardDescription>
-      </CardHeader>
-      <CardContent>
-        <div>
-          <div className="flex flex-col mb-6">
-            <span className="text-muted-foreground">
-              {dictionary.data.email}:{" "}
-              {<span className="text-foreground">{contact.email}</span>}
-            </span>
-            <span className="text-muted-foreground">
-              {dictionary.data.phone}:{" "}
-              {<span className="text-foreground">{contact.phone.display}</span>}
-            </span>
-            <span className="text-muted-foreground">
-              {dictionary.data.location}:{" "}
-              {
-                <span className="text-foreground">
-                  {dictionary.data.country}
-                </span>
-              }
-            </span>
-          </div>
+    <Card className="w-full max-w-300">
+      <CardContent className="grid gap-10 p-6 md:p-8 lg:grid-cols-2 lg:grid-rows-[auto_1fr] lg:gap-x-16 lg:p-12">
+        <div className="lg:col-start-1 lg:row-start-1">
+          <h2 className="text-4xl font-bold dash mb-8 ">{dictionary.title}</h2>
 
+          <p className="max-w-lg text-lg text-muted-foreground leading-relaxed">
+            {dictionary.description}
+          </p>
+        </div>
+
+        <div className="lg:col-start-2 lg:row-span-2 lg:row-start-1">
           <form onSubmit={form.handleSubmit(onSubmit)}>
             <FieldGroup>
               <Controller
@@ -102,6 +81,7 @@ export default function ContactForm({ dictionary }: ContactFormProps) {
                       placeholder={dictionary.fullname.placeholder}
                       aria-label={dictionary.fullname.placeholder}
                       aria-invalid={fieldState.invalid}
+                      className="h-11"
                     />
 
                     {fieldState.invalid && (
@@ -249,6 +229,47 @@ export default function ContactForm({ dictionary }: ContactFormProps) {
               </Button>
             </FieldGroup>
           </form>
+        </div>
+
+        <div className="lg:col-start-1 lg:row-start-2 lg:self-end mt-10 lg:mt-0">
+          <div className="flex flex-col mb-6 gap-1">
+            <span className="text-muted-foreground">
+              {dictionary.data.email}:{" "}
+              {<span className="text-foreground">{contact.email}</span>}
+            </span>
+
+            <span className="text-muted-foreground">
+              {dictionary.data.phone}:{" "}
+              {<span className="text-foreground">{contact.phone.display}</span>}
+            </span>
+
+            <span className="text-muted-foreground">
+              {dictionary.data.location}:{" "}
+              {
+                <span className="text-foreground">
+                  {dictionary.data.country}
+                </span>
+              }
+            </span>
+          </div>
+
+          <nav className="flex flex-row gap-3">
+            <a
+              className="w-12 h-12 rounded-md border flex items-center justify-center bg-card hover:bg-primary hover:text-primary-foreground transition-all"
+              href={contact.social.linkedIn}
+              target="_blank"
+            >
+              <LinkedInIcon className="size-5" />
+            </a>
+
+            <a
+              className="w-12 h-12 rounded-md border flex items-center justify-center bg-card hover:bg-primary hover:text-primary-foreground transition-all"
+              href={contact.social.github}
+              target="_blank"
+            >
+              <GitHubIcon className="size-5" />
+            </a>
+          </nav>
         </div>
       </CardContent>
     </Card>
