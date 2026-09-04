@@ -16,3 +16,12 @@ export const contact = {
     linkedIn: "https://www.linkedin.com/in/victor-figueiredo-mendes/",
   },
 };
+
+export const APP_SECTIONS = {
+  hero: "hero",
+  services: "services",
+  projects: "projects",
+  benefits: "benefits",
+  workProcess: "workProcess",
+  contact: "contact",
+} as const;

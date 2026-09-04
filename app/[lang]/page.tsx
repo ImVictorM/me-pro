@@ -13,18 +13,9 @@ import Image from "next/image";
 import { Badge } from "@/components/ui/badge";
 import placeholderImg from "@/assets/images/placeholder.png";
 import { ContactForm } from "@/components/ContactForm";
-import { contact, copyrightYear } from "@/data";
+import { APP_SECTIONS, contact, copyrightYear } from "@/data";
 import LinkedInIcon from "@/assets/icons/LinkedInIcon";
 import GitHubIcon from "@/assets/icons/GitHubIcon";
-
-export const APP_SECTIONS = {
-  hero: "hero",
-  services: "services",
-  projects: "projects",
-  benefits: "benefits",
-  workProcess: "workProcess",
-  contact: "contact",
-} as const;
 
 export default async function Home() {
   const dict = await getDictionary();

@@ -18,6 +18,8 @@ type Dictionary = Awaited<ReturnType<(typeof dicts)["en-US"]>>;
 
 export type ContactFormDictionary = Dictionary["contact"]["form"];
 
+export type DictionaryHeader = Dictionary["header"];
+
 export const hasLocale = (locale: string): locale is LocaleDictionary =>
   locale in dicts;
 
