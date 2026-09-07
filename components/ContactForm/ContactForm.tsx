@@ -54,7 +54,7 @@ export default function ContactForm({ dictionary }: ContactFormProps) {
   }
 
   return (
-    <Card className="w-full max-w-300">
+    <Card className="w-full max-w-layout">
       <CardContent className="grid gap-10 p-6 md:p-8 lg:grid-cols-2 lg:grid-rows-[auto_1fr] lg:gap-x-16 lg:p-12">
         <div className="lg:col-start-1 lg:row-start-1">
           <h2 className="text-4xl font-bold dash mb-8 ">{dictionary.title}</h2>
