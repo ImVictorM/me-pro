@@ -6,6 +6,7 @@ import {
   CardAction,
   CardContent,
   CardDescription,
+  CardFooter,
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
@@ -17,6 +18,8 @@ import { APP_SECTIONS, contact, copyrightYear } from "@/data";
 import LinkedInIcon from "@/assets/icons/LinkedInIcon";
 import GitHubIcon from "@/assets/icons/GitHubIcon";
 import { AnimationContainer } from "@/components/AnimationContainer";
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 
 export default async function Home() {
   const dict = await getDictionary();
@@ -40,27 +43,46 @@ export default async function Home() {
             </h1>
             <p
               data-reveal-hero
-              className="text-2xl text-muted-foreground leading-relaxed font-light"
+              className="max-w-2xl text-2xl text-muted-foreground leading-relaxed font-light"
             >
               {dict.hero.subtitle}
             </p>
 
-            <div data-reveal-hero className="flex gap-4 mt-4">
-              <Button className="text-lg px-8 py-7" type="button">
-                {dict.hero.cta.primaryAction}
-              </Button>
-              <Button
-                className="text-lg px-8 py-7"
-                type="button"
-                variant="outline"
-              >
-                {dict.hero.cta.secondaryAction}
-              </Button>
+            <div data-reveal-hero className="flex flex-col mt-4 gap-6">
+              <div className="flex gap-4">
+                <Button className="text-lg px-8 py-7" type="button">
+                  {dict.hero.cta.primaryAction}
+                </Button>
+                <Button
+                  className="text-lg px-8 py-7"
+                  type="button"
+                  variant="outline"
+                >
+                  {dict.hero.cta.secondaryAction}
+                </Button>
+              </div>
+
+              <nav className="flex flex-row gap-4 ml-2">
+                <a
+                  className="text-muted-foreground hover:text-primary transition-all"
+                  href={contact.social.linkedIn}
+                  target="_blank"
+                >
+                  <LinkedInIcon className="size-6" />
+                </a>
+
+                <a
+                  className="text-muted-foreground hover:text-primary transition-all"
+                  href={contact.social.github}
+                  target="_blank"
+                >
+                  <GitHubIcon className="size-6" />
+                </a>
+              </nav>
             </div>
           </section>
 
           {/* Services */}
-
           <section
             id={APP_SECTIONS.services}
             data-reveal-section
@@ -70,21 +92,39 @@ export default async function Home() {
               {dict.services.title}
             </h2>
 
+            <p data-reveal className="section-description">
+              {dict.services.description}
+            </p>
+
             <ul
               data-reveal
-              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
             >
               {dict.services.items.map((service, index) => (
                 <li key={index}>
-                  <Card className="h-full">
+                  <Card className="h-full bg-card/60 border border-border transition-colors hover:border-primary/60">
                     <CardHeader>
+                      <div className="mb-2">
+                        <span className="font-mono text-sm text-primary">
+                          {String(index + 1).padStart(2, "0")}
+                        </span>
+                      </div>
                       <CardTitle className="text-xl">{service.title}</CardTitle>
                     </CardHeader>
-                    <CardContent>
+                    <CardContent className="mb-auto">
                       <p className="leading-relaxed text-muted-foreground">
                         {service.description}
                       </p>
                     </CardContent>
+                    <CardFooter className="ml-auto">
+                      <Link
+                        className="flex flex-row items-center gap-1 text-xs text-primary hover:underline"
+                        prefetch={false}
+                        href={`#${APP_SECTIONS.contact}`}
+                      >
+                        {dict.services.cta} {<ArrowRight size={16} />}
+                      </Link>
+                    </CardFooter>
                   </Card>
                 </li>
               ))}
@@ -135,10 +175,10 @@ export default async function Home() {
           {/* About 1 */}
           <section
             id={APP_SECTIONS.benefits}
-            className="section max-w-225 mx-auto"
+            className="section max-w-225"
             data-reveal-section
           >
-            <h2 data-reveal className="flex justify-center">
+            <h2 data-reveal className="flex sm:justify-center">
               <span className="block w-fit section-title">
                 {dict.about.benefitsSection.title}
               </span>
@@ -205,7 +245,7 @@ export default async function Home() {
       </AnimationContainer>
 
       <footer className="border-t py-8">
-        <div className="mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-layout mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col gap-4 items-center justify-center sm:flex-row sm:justify-between">
             <p className="text-muted-foreground text-sm">
               {copyrightYear} Victor Mendes · {dict.contact.form.data.country}

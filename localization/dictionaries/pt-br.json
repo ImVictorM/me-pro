@@ -22,24 +22,26 @@
   },
   "services": {
     "title": "Serviços",
+    "description": "Da presença digital ao software sob medida, desenvolvo soluções de acordo com as necessidades do seu negócio",
     "items": [
       {
-        "title": "Websites para conversão",
-        "description": "Sites institucionais e landing pages otimizados para conversão e performance"
+        "title": "Websites & landing pages",
+        "description": "Sites rápidos e responsivos, pensados para apresentar seu negócio com clareza e transformar visitas em oportunidades"
       },
       {
-        "title": "Aplicativos web e sistemas sob medida",
-        "description": "Soluções de software personalizadas para atender às necessidades específicas do seu negócio"
+        "title": "Aplicações web personalizadas",
+        "description": "Sistemas desenvolvidos de acordo com os processos, objetivos e necessidades diária do seu negócio"
       },
       {
         "title": "Aplicativos mobile",
-        "description": "Desenvolvimento de aplicativos para Android prontos para serem publicados"
+        "description": "Aplicativos Android desenvolvidos para o seu caso de uso e preparados para publicação na Google Play"
       },
       {
-        "title": "Atualização e manutenção de sistemas",
-        "description": "já tem algo pronto? posso melhorá-lo, consertar bugs, problemas de performance, interface e ajudar seu produto evoluir"
+        "title": "Manutenção e melhorias",
+        "description": "Já possui algo? Posso corrigir problemas, melhorar desempenho e usabilidade e ajudar sua solução a evoluir"
       }
-    ]
+    ],
+    "cta": "Falar sobre serviço"
   },
   "projects": {
     "title": "Trabalhos selecionados",

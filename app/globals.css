@@ -155,8 +155,12 @@
 }
 
 @utility section-title {
-  @apply w-full text-4xl font-bold mb-14;
+  @apply w-full text-4xl font-bold mb-10;
   @apply dash;
+}
+
+@utility section-description {
+  @apply max-w-2xl text-lg leading-relaxed text-muted-foreground mb-12;
 }
 
 

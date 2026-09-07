@@ -22,24 +22,26 @@
   },
   "services": {
     "title": "Services",
+    "description": "From a professional online presence to custom software, I build solutions around the needs of your business",
     "items": [
       {
-        "title": "Websites for conversion",
-        "description": "Institutional sites and landing pages optimized for conversion and performance"
+        "title": "Websites & landing pages",
+        "description": "Fast, responsive websites designed to present your business clearly and turn visits into opportunities"
       },
       {
-        "title": "Web applications and custom systems",
-        "description": "Custom software solutions to meet your business's specific needs"
+        "title": "Custom web applications",
+        "description": "Tailored systems built around your business processes, goals, and day-to-day needs"
       },
       {
         "title": "Mobile applications",
-        "description": "Development of applications for Android ready to be published"
+        "description": "Android applications built for your use case and prepared for publication on Google Play"
       },
       {
-        "title": "System updates and maintenance",
-        "description": "Already have something ready? I can improve it, fix bugs, performance issues, interface and help your product evolve"
+        "title": "Maintenance and improvements",
+        "description": "Already have something? I can fix issues, improve performance and usability, and help it evolve"
       }
-    ]
+    ],
+    "cta": "Contact about service"
   },
   "projects": {
     "title": "Selected work",
