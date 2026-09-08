@@ -138,6 +138,10 @@ export default async function Home() {
                 {dict.projects.title}
               </h2>
 
+              <p data-reveal className="section-description">
+                {dict.projects.description}
+              </p>
+
               <ul
                 data-reveal
                 className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"

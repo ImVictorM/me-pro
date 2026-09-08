@@ -45,6 +45,7 @@
   },
   "projects": {
     "title": "Trabalhos selecionados",
+    "description": "Seleção de projetos e contribuições. Clique para saber mais sobre",
     "items": [
       {
         "title": "Cantinho dos bordados",
