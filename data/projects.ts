@@ -23,6 +23,19 @@ import triviaRanking from "@/assets/images/trivia/triviaRanking.webp";
 
 import ecommerceCover from "@/assets/images/ecommerce/ecommerceCover.webp";
 import tocataCover from "@/assets/images/tocata/tocataCover.webp";
+import type { StaticImageData } from "next/image";
+
+export type ProjectData = {
+  cover: StaticImageData;
+  images: StaticImageData[];
+  technologies: string[];
+  inDevelopment: boolean;
+  links?: {
+    demo?: string;
+    source?: string;
+  };
+  devYear?: string;
+};
 
 export const PROJECTS = {
   cantinho: {
@@ -39,7 +52,7 @@ export const PROJECTS = {
     links: {
       demo: "https://cantinhodosbordados.com.br/",
     },
-    devYer: "2026",
+    devYear: "2026",
   },
   meerkat: {
     cover: meerkatCover,
@@ -55,7 +68,7 @@ export const PROJECTS = {
     links: {
       demo: "https://meerkats.com.br/",
     },
-    devYer: "2026",
+    devYear: "2026",
   },
   tocata: {
     cover: tocataCover,
@@ -69,9 +82,9 @@ export const PROJECTS = {
     technologies: ["C#", "ASP.NET Core", "Entity Framework Core", "PostgreSQL"],
     inDevelopment: false,
     links: {
-      github: "https://github.com/ImVictorM/ECommerceManagement",
+      source: "https://github.com/ImVictorM/ECommerceManagement",
     },
-    devYer: "2025",
+    devYear: "2025",
   },
   meAndroid: {
     cover: meAndroidCover,
@@ -85,22 +98,22 @@ export const PROJECTS = {
     technologies: ["React", "TypeScript", "Tailwind"],
     inDevelopment: false,
     links: {
-      github: "https://github.com/ImVictorM/MeAndroid-7V",
+      source: "https://github.com/ImVictorM/MeAndroid-7V",
       demo: "https://me-android.vercel.app/",
     },
-    devYer: "2025",
+    devYear: "2025",
   },
   trivia: {
     cover: triviaCover,
     images: [triviaCover, triviaEnter, triviaWellDone, triviaRanking],
-    technologies: [],
+    technologies: ["React", "TypeScript", "Styled Components"],
     inDevelopment: false,
     links: {
-      github: "https://github.com/ImVictorM/Trivia-Game",
+      source: "https://github.com/ImVictorM/Trivia-Game",
       demo: "https://play-trivia-game.vercel.app/",
     },
-    devYer: "2024",
+    devYear: "2024",
   },
-} as const;
+} satisfies Record<string, ProjectData>;
 
 export type ProjectId = keyof typeof PROJECTS;

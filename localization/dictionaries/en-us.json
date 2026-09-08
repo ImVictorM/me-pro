@@ -46,44 +46,60 @@
   "projects": {
     "title": "Selected work",
     "description": "A selection of projects and contributions. Click them to learn more about",
-    "items": [
-      {
+    "items": {
+      "cantinho": {
         "title": "Cantinho dos bordados",
         "description": "Landing page for local business of custom embroidery",
-        "role": "Freelance Developer",
-        "subject": "Landing page"
+        "role": "Freelance developer",
+        "subject": "Landing page",
+        "context": "",
+        "approach": "",
+        "result": ""
       },
-      {
+      "meerkat": {
         "title": "Meerkat",
         "description": "Electronics-focused marketplace with a security layer between transactions",
-        "role": "Full Stack Developer",
-        "subject": "Marketplace"
+        "role": "Full Stack developer",
+        "subject": "Marketplace",
+        "context": "",
+        "approach": "",
+        "result": ""
       },
-      {
+      "tocata": {
         "title": "Tocata",
         "description": "Music application for mobile devices",
-        "role": "Freelance Developer",
-        "subject": "Mobile"
+        "role": "Freelance developer",
+        "subject": "Mobile",
+        "context": "",
+        "approach": "",
+        "result": ""
       },
-      {
+      "ecommerce": {
         "title": "ECommerce management",
         "description": "API for managing online commerce following best practices of architecture",
-        "role": "Back-End Developer",
-        "subject": "Architectural Study"
+        "role": "Back-End developer",
+        "subject": "Architectural study",
+        "context": "",
+        "approach": "",
+        "result": ""
       },
-      {
+      "meAndroid": {
         "title": "Me android",
         "description": "Interactive portfolio inspired by the design of Nier:Automata",
-        "role": "Front-End Developer",
-        "subject": "Interactive Portfolio"
+        "role": "Front-End developer",
+        "subject": "Interactive portfolio",
+        "context": "",
+        "approach": "",
+        "result": ""
       },
-      {
+      "trivia": {
         "title": "Trivia game",
         "description": "Web game in the quiz style with various topics and local ranking",
-        "role": "Front-End Developer",
-        "subject": "Web Game"
+        "role": "Front-End developer",
+        "subject": "Web game"
       }
-    ]
+    },
+    "details": {}
   },
   "about": {
     "benefitsSection": {

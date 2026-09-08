@@ -3,16 +3,12 @@ import { getDictionary } from "./dictionaries";
 import { ScrollableWrapper, Header } from "@/components/Header";
 import {
   Card,
-  CardAction,
   CardContent,
-  CardDescription,
   CardFooter,
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import Image from "next/image";
-import { Badge } from "@/components/ui/badge";
-import placeholderImg from "@/assets/images/placeholder.png";
+
 import { ContactForm } from "@/components/ContactForm";
 import { APP_SECTIONS, contact, copyrightYear } from "@/data";
 import LinkedInIcon from "@/assets/icons/LinkedInIcon";
@@ -20,9 +16,17 @@ import GitHubIcon from "@/assets/icons/GitHubIcon";
 import { AnimationContainer } from "@/components/AnimationContainer";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
+import { ProjectId, PROJECTS } from "@/data/projects";
+import { ProjectDialogCard } from "@/components/ProjectDialogCard";
 
 export default async function Home() {
   const dict = await getDictionary();
+
+  const projects = Object.entries(PROJECTS).map(([id, project]) => ({
+    id,
+    ...project,
+    content: dict.projects.items[id as ProjectId],
+  }));
 
   return (
     <div>
@@ -146,32 +150,11 @@ export default async function Home() {
                 data-reveal
                 className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
               >
-                {dict.projects.items.map(
-                  ({ description, role, subject, title }, index) => (
-                    <li key={index}>
-                      <Card className="h-full relative mx-auto w-full pt-0">
-                        <div className="absolute inset-0 z-30 aspect-video bg-black/35" />
-                        <Image
-                          src={placeholderImg}
-                          alt=""
-                          className="relative z-20 aspect-video w-full object-cover brightness-60 grayscale dark:brightness-40"
-                        />
-                        <CardHeader className="flex flex-col gap-2">
-                          <div className="flex flex-col">
-                            <CardTitle>{title}</CardTitle>
-
-                            <CardDescription>{description}</CardDescription>
-                          </div>
-
-                          <CardAction className="flex flex-row gap-2">
-                            <Badge variant="secondary">{role}</Badge>
-                            <Badge variant="secondary">{subject}</Badge>
-                          </CardAction>
-                        </CardHeader>
-                      </Card>
-                    </li>
-                  ),
-                )}
+                {projects.map(({ id, ...project }) => (
+                  <li className="group" key={id}>
+                    <ProjectDialogCard project={project} />
+                  </li>
+                ))}
               </ul>
             </section>
           </div>

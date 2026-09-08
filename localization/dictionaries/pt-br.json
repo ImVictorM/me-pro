@@ -46,44 +46,62 @@
   "projects": {
     "title": "Trabalhos selecionados",
     "description": "Seleção de projetos e contribuições. Clique para saber mais sobre",
-    "items": [
-      {
+    "items": {
+      "cantinho": {
         "title": "Cantinho dos bordados",
         "description": "Landing page para negócio local de bordados personalizados",
         "role": "Desenvolvedor autônomo",
-        "subject": "Landing page"
+        "subject": "Landing page",
+        "context": "",
+        "approach": "",
+        "result": ""
       },
-      {
+      "meerkat": {
         "title": "Meerkat",
         "description": "Marketplace focado em eletrônicos com camada de segurança entre negociações",
-        "role": "Desenvolvedor Full Stack",
-        "subject": "Marketplace"
+        "role": "Desenvolvedor full stack",
+        "subject": "Marketplace",
+        "context": "",
+        "approach": "",
+        "result": ""
       },
-      {
+      "tocata": {
         "title": "Tocata",
         "description": "Aplicativo de música para dispositivos móveis",
         "role": "Desenvolvedor autônomo",
-        "subject": "Mobile"
+        "subject": "Mobile",
+        "context": "",
+        "approach": "",
+        "result": ""
       },
-      {
+      "ecommerce": {
         "title": "ECommerce management",
         "description": "API para gestão de comércio eletrônico seguindo boas práticas de arquitetura",
         "role": "Desenvolvedor back-end",
-        "subject": "Estudo arquitetural"
+        "subject": "Estudo arquitetural",
+        "context": "",
+        "approach": "",
+        "result": ""
       },
-      {
+      "meAndroid": {
         "title": "Me android",
         "description": "Portfólio interativo inspirado no ema de Nier:Automata",
         "role": "Desenvolvedor front-end",
-        "subject": "Portfólio interativo"
+        "subject": "Portfólio interativo",
+        "context": "",
+        "approach": "",
+        "result": ""
       },
-      {
+      "trivia": {
         "title": "Trivia game",
         "description": "Jogo web no estilo quiz com tópicos variados e ranking local",
         "role": "Desenvolvedor front-end",
-        "subject": "Jogo web"
+        "subject": "Jogo web",
+        "context": "",
+        "approach": "",
+        "result": ""
       }
-    ]
+    }
   },
   "about": {
     "benefitsSection": {
