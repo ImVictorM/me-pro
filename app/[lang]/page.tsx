@@ -54,13 +54,23 @@ export default async function Home() {
 
             <div data-reveal-hero className="flex flex-col mt-4 gap-6">
               <div className="flex gap-4">
-                <Button className="text-lg px-8 py-7" type="button">
+                <Button
+                  nativeButton={false}
+                  render={
+                    <Link href={`#${APP_SECTIONS.contact}`} prefetch={false} />
+                  }
+                  className="text-lg px-8 py-7"
+                >
                   {dict.hero.cta.primaryAction}
                 </Button>
+
                 <Button
                   className="text-lg px-8 py-7"
-                  type="button"
+                  nativeButton={false}
                   variant="outline"
+                  render={
+                    <Link href={`#${APP_SECTIONS.projects}`} prefetch={false} />
+                  }
                 >
                   {dict.hero.cta.secondaryAction}
                 </Button>
@@ -71,6 +81,7 @@ export default async function Home() {
                   className="text-muted-foreground hover:text-primary transition-all"
                   href={contact.social.linkedIn}
                   target="_blank"
+                  rel="noopener noreferrer"
                 >
                   <LinkedInIcon className="size-6" />
                 </a>
@@ -79,6 +90,7 @@ export default async function Home() {
                   className="text-muted-foreground hover:text-primary transition-all"
                   href={contact.social.github}
                   target="_blank"
+                  rel="noopener noreferrer"
                 >
                   <GitHubIcon className="size-6" />
                 </a>

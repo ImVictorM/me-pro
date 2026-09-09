@@ -1,9 +1,9 @@
 import Link from "next/link";
 
-import { buttonVariants } from "@/components/ui/button";
 import { getDictionary } from "@/app/[lang]/dictionaries";
 import MobileNavigation from "./MobileNavigation";
 import { APP_SECTIONS } from "@/data";
+import { Button } from "@/components/ui/button";
 
 export default async function Header() {
   const dict = await getDictionary();
@@ -64,13 +64,13 @@ export default async function Header() {
         </nav>
 
         <div className="flex flex-row items-center gap-4">
-          <Link
-            className={buttonVariants({ variant: "default", size: "lg" })}
-            prefetch={false}
-            href={`#${APP_SECTIONS.contact}`}
+          <Button
+            nativeButton={false}
+            render={<Link prefetch={false} href={`#${APP_SECTIONS.contact}`} />}
+            size="lg"
           >
             {dict.header.cta.startProject}
-          </Link>
+          </Button>
 
           <MobileNavigation dictionary={dict.header} />
         </div>

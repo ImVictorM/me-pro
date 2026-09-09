@@ -25,7 +25,7 @@ import {
 } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 
-import { buttonVariants } from "@/components/ui/button";
+import { Button } from "@/components/ui/button";
 import {
   Carousel,
   CarouselApi,
@@ -158,7 +158,7 @@ function ProjectImageCarousel({ images, title }: ProjectImageCarouselProps) {
                 <Image
                   src={img}
                   alt={`${title} - screenshot ${index + 1}`}
-                  className="size-full object-cover"
+                  className={`size-full ${images.length > 1 ? "object-contain" : "object-cover"}`}
                 />
               ) : (
                 <div
@@ -283,27 +283,35 @@ export default function ProjectDialogCard({
           {links && (
             <div className="flex flex-row gap-3">
               {links.demo && (
-                <a
-                  href={links.demo}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={buttonVariants({ variant: "default", size: "lg" })}
+                <Button
+                  nativeButton={false}
+                  size="lg"
+                  render={
+                    <a
+                      href={links.demo}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    />
+                  }
                 >
                   Visit website {<ArrowUpRight />}
-                </a>
+                </Button>
               )}
               {links.source && (
-                <a
-                  href={links.source}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={buttonVariants({
-                    variant: "secondary",
-                    size: "lg",
-                  })}
+                <Button
+                  size="lg"
+                  nativeButton={false}
+                  variant="outline"
+                  render={
+                    <a
+                      href={links.source}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    />
+                  }
                 >
                   GitHub {<ArrowUpRight />}
-                </a>
+                </Button>
               )}
             </div>
           )}
