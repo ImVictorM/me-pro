@@ -52,54 +52,62 @@
         "description": "Landing page for local business of custom embroidery",
         "role": "Freelance developer",
         "subject": "Landing page",
-        "context": "",
-        "approach": "",
-        "result": ""
+        "context": "Cantinho dos Bordados is a small embroidery studio that relied mainly on direct contact through Instagram and WhatsApp to present its work and reach new customers",
+        "approach": "I created a dedicated landing page to strengthen the studio's online presence, better present its services and work, and connect the website with the social channels its customers already used",
+        "result": "The website gave the studio a more professional digital presence and made it easier to discover through search engines, while reinforcing its visual identity and providing another channel for attracting new customers"
       },
       "meerkat": {
         "title": "Meerkat",
         "description": "Electronics-focused marketplace with a security layer between transactions",
         "role": "Full Stack developer",
         "subject": "Marketplace",
-        "context": "",
-        "approach": "",
-        "result": ""
+        "context": "Meerkat started as an idea for a new business. I was invited to help develop important marketplace flows, including purchases, exchanges, cancellations, and other parts of the transaction process",
+        "approach": "The solution was designed as a marketplace where people can buy and sell products through a simple and safer process. A mediation layer was introduced into the transaction flow to help prevent fraudulent purchases from reaching the final customer",
+        "result": "The project evolved from an initial business idea into a structured marketplace with its main transaction flows defined and implemented. It is currently being prepared for launch toward the end of 2026"
       },
       "tocata": {
         "title": "Tocata",
         "description": "Music application for mobile devices",
         "role": "Freelance developer",
         "subject": "Mobile",
-        "context": "",
-        "approach": "",
-        "result": ""
+        "context": "The idea came from a problem I experienced while practicing guitar. Repeating a specific part of a song required constantly moving the mouse back to the same timestamp, and the tools I was using did not provide a convenient way to slow the music down for practice",
+        "approach": "I first created a web version called RewindIt to validate the idea. After using it, I realized that a mobile experience would be better suited to this type of interaction, so I started rebuilding the application for mobile, renamed it Tocata, and created a new visual identity around the product",
+        "result": "Tocata is currently in development and is planned for release by the end of 2026. The project is evolving from a tool created for my own practice into an application designed to make music practice more convenient for other people as well"
       },
       "ecommerce": {
         "title": "ECommerce management",
         "description": "API for managing online commerce following best practices of architecture",
         "role": "Back-End developer",
         "subject": "Architectural study",
-        "context": "",
-        "approach": "",
-        "result": ""
+        "context": "I created this project to deepen my understanding of software architecture by putting concepts from Clean Architecture and Domain-Driven Design into practice",
+        "approach": "I modeled the core domain of a basic e-commerce system and used the project to explore concepts such as Domain-Driven Design, Clean Architecture, CQRS, SOLID, and other architectural and design patterns",
+        "result": "The project gave me a stronger foundation in software architecture and helped me apply these concepts more confidently in other projects, improving both code quality and the way I reason about software systems as a whole"
       },
       "meAndroid": {
         "title": "Me android",
         "description": "Interactive portfolio inspired by the design of Nier:Automata",
         "role": "Front-End developer",
         "subject": "Interactive portfolio",
-        "context": "",
-        "approach": "",
-        "result": ""
+        "context": "The project was inspired by NieR:Automata, a game whose visual language and interface design I find particularly interesting. I wanted to explore those ideas by creating an interactive portfolio based on the game's aesthetic and atmosphere",
+        "approach": "Using React and Tailwind CSS, I created a minimalist and interactive website that presents my work through a fictional character instead of following the structure of a traditional portfolio. In the experience, I introduce myself as an android named 7V",
+        "result": "The result is an unconventional portfolio that combines a minimalist interface, interactive elements, and a strong visual concept to create a more memorable way of presenting my work"
       },
       "trivia": {
         "title": "Trivia game",
         "description": "Web game in the quiz style with various topics and local ranking",
         "role": "Front-End developer",
-        "subject": "Web game"
+        "subject": "Web game",
+        "context": "The project started as a study exercise focused on building a complete question-and-answer game for the web",
+        "approach": "I created a simple and accessible quiz experience where players can test their general or topic-specific knowledge and receive a score at the end of each game, with results recorded in a local ranking",
+        "result": "The result is a lightweight and easy-to-play web game that combines a straightforward interface with a complete quiz flow and local score tracking"
       }
     },
-    "details": {}
+    "details": {
+      "context": "Context",
+      "approach": "Approach",
+      "result": "Result",
+      "inDevelopment": "In development"
+    }
   },
   "about": {
     "benefitsSection": {

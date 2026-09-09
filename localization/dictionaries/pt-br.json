@@ -52,55 +52,61 @@
         "description": "Landing page para negócio local de bordados personalizados",
         "role": "Desenvolvedor autônomo",
         "subject": "Landing page",
-        "context": "",
-        "approach": "",
-        "result": ""
+        "context": "O Cantinho dos Bordados é um pequeno ateliê de bordados que dependia principalmente do contato direto pelo Instagram e WhatsApp para apresentar seus trabalhos e alcançar novos clientes",
+        "approach": "Criei uma landing page própria para fortalecer a presença online do ateliê, apresentar melhor seus serviços e trabalhos e integrar o website aos canais sociais que seus clientes já utilizavam",
+        "result": "O website trouxe uma presença digital mais profissional para o ateliê e facilitou sua descoberta por mecanismos de busca, além de reforçar sua identidade visual e criar mais um canal para atrair novos clientes"
       },
       "meerkat": {
         "title": "Meerkat",
         "description": "Marketplace focado em eletrônicos com camada de segurança entre negociações",
         "role": "Desenvolvedor full stack",
         "subject": "Marketplace",
-        "context": "",
-        "approach": "",
-        "result": ""
+        "context": "A Meerkat surgiu a partir da ideia de um novo negócio. Fui convidado para ajudar a desenvolver fluxos importantes do marketplace, incluindo compras, trocas, cancelamentos e outras etapas do processo de negociação",
+        "approach": "A solução foi estruturada como um marketplace onde pessoas podem comprar e vender produtos por meio de um processo simples e mais seguro. Uma camada de mediação foi adicionada ao fluxo de negociação para ajudar a impedir que compras fraudulentas cheguem ao cliente final",
+        "result": "O projeto evoluiu de uma ideia inicial de negócio para um marketplace estruturado, com seus principais fluxos de negociação definidos e implementados. Atualmente, está sendo preparado para lançamento no final de 2026"
       },
       "tocata": {
         "title": "Tocata",
         "description": "Aplicativo de música para dispositivos móveis",
         "role": "Desenvolvedor autônomo",
         "subject": "Mobile",
-        "context": "",
-        "approach": "",
-        "result": ""
+        "context": "A ideia surgiu de um problema que eu encontrava ao praticar guitarra. Para repetir uma parte específica de uma música, precisava mover constantemente o mouse de volta para o mesmo trecho, além de não ter uma forma prática de reduzir a velocidade da música para estudar",
+        "approach": "Primeiro criei uma versão web chamada RewindIt para validar a ideia. Depois de utilizá-la, percebi que uma experiência mobile seria mais adequada para esse tipo de interação, então comecei a reconstruir a aplicação para dispositivos móveis, renomeei o projeto para Tocata e criei uma nova identidade visual para o produto",
+        "result": "O Tocata ainda está em desenvolvimento e tem lançamento previsto para o final de 2026. O projeto está evoluindo de uma ferramenta criada para atender uma necessidade minha para uma aplicação pensada para tornar a prática musical mais conveniente para outras pessoas também"
       },
       "ecommerce": {
         "title": "ECommerce management",
         "description": "API para gestão de comércio eletrônico seguindo boas práticas de arquitetura",
         "role": "Desenvolvedor back-end",
         "subject": "Estudo arquitetural",
-        "context": "",
-        "approach": "",
-        "result": ""
+        "context": "Criei este projeto para aprofundar meus conhecimentos em arquitetura de software, colocando em prática conceitos estudados em Clean Architecture e Domain-Driven Design",
+        "approach": "Modelei o domínio principal de um e-commerce básico e utilizei o projeto para explorar conceitos como Domain-Driven Design, Clean Architecture, CQRS, SOLID e outros padrões de arquitetura e projeto",
+        "result": "O projeto me proporcionou uma base mais sólida em arquitetura de software e me ajudou a aplicar esses conceitos com mais segurança em outros projetos, melhorando tanto a qualidade do código quanto minha visão de software como um todo"
       },
       "meAndroid": {
         "title": "Me android",
         "description": "Portfólio interativo inspirado no ema de Nier:Automata",
         "role": "Desenvolvedor front-end",
         "subject": "Portfólio interativo",
-        "context": "",
-        "approach": "",
-        "result": ""
+        "context": "O projeto foi inspirado em NieR:Automata, um jogo cuja linguagem visual e design de interface considero particularmente interessantes. Quis explorar essas ideias criando um portfólio interativo baseado na estética e atmosfera do jogo",
+        "approach": "Utilizando React e Tailwind CSS, criei um website minimalista e interativo que apresenta meu trabalho por meio de um personagem fictício, em vez de seguir a estrutura de um portfólio tradicional. Na experiência, me apresento como um androide chamado 7V",
+        "result": "O resultado é um portfólio fora do padrão que combina uma interface minimalista, elementos interativos e um conceito visual marcante para criar uma forma mais memorável de apresentar meu trabalho"
       },
       "trivia": {
         "title": "Trivia game",
         "description": "Jogo web no estilo quiz com tópicos variados e ranking local",
         "role": "Desenvolvedor front-end",
         "subject": "Jogo web",
-        "context": "",
-        "approach": "",
-        "result": ""
+        "context": "O projeto começou como um exercício de estudo focado na criação de um jogo completo de perguntas e respostas para a web",
+        "approach": "Criei uma experiência simples e acessível de quiz, onde o jogador pode testar conhecimentos gerais ou sobre temas específicos e receber uma pontuação ao final de cada partida, com os resultados registrados em um ranking local",
+        "result": "O resultado é um jogo web leve e fácil de jogar, que combina uma interface direta com um fluxo completo de quiz e acompanhamento local das pontuações"
       }
+    },
+    "details": {
+      "context": "Contexto",
+      "approach": "Abordagem",
+      "result": "Resultado",
+      "inDevelopment": "Em desenvolvimento"
     }
   },
   "about": {

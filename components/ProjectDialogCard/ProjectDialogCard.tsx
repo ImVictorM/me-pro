@@ -21,23 +21,33 @@ import Image from "next/image";
 import type { ProjectData } from "@/data/projects";
 import type { StaticImageData } from "next/image";
 import { ComponentProps } from "react";
+import { DictionaryProjectDetails } from "@/app/[lang]/dictionaries";
+import { buttonVariants } from "@/components/ui/button";
+import { ArrowUpRight } from "lucide-react";
 
-type ProjectContent = {
+type ProjectCardContent = {
   title: string;
   description: string;
   role: string;
   subject: string;
 };
 
+type ProjectDialogContent = ProjectCardContent & {
+  context: string;
+  approach: string;
+  result: string;
+};
+
 type ProjectCardProps = ComponentProps<typeof Card> &
-  ProjectContent & {
+  ProjectCardContent & {
     cover: StaticImageData;
   };
 
 export type ProjectDialogCardProps = {
   project: ProjectData & {
-    content: ProjectContent;
+    content: ProjectDialogContent;
   };
+  dictionary: DictionaryProjectDetails;
 };
 
 function ProjectCard({
@@ -81,7 +91,16 @@ function ProjectCard({
 }
 
 export default function ProjectDialogCard({
-  project: { cover, content, images, technologies, devYear },
+  project: {
+    cover,
+    content,
+    images,
+    technologies,
+    devYear,
+    links,
+    inDevelopment,
+  },
+  dictionary,
 }: ProjectDialogCardProps) {
   return (
     <Dialog>
@@ -99,23 +118,64 @@ export default function ProjectDialogCard({
         }
       />
 
-      <DialogContent className="max-h-[90dvh] overflow-y-auto sm:max-w-3xl">
+      <DialogContent className="max-h-[90dvh] overflow-y-auto scrollbar-none sm:max-w-3xl">
         <DialogHeader>
-          <DialogTitle>{content.title}</DialogTitle>
+          <DialogTitle className="text-3xl font-bold dash mb-4">
+            {content.title}
+          </DialogTitle>
 
-          <DialogDescription>{content.description}</DialogDescription>
+          <DialogDescription className="text-base leading-relaxed text-muted-foreground">
+            {content.description}
+          </DialogDescription>
         </DialogHeader>
 
         <div className="flex flex-col gap-6">
-          {images[0] && (
-            <div className="relative aspect-video overflow-hidden rounded-lg">
-              <Image
-                src={images[0]}
-                alt={`${content.title} project preview`}
-                className="size-full object-cover"
-              />
+          <div className="flex flex-col gap-2">
+            {cover && (
+              <div className="relative aspect-video overflow-hidden rounded-lg">
+                <Image
+                  src={cover}
+                  alt={`${content.title} project preview`}
+                  className="size-full object-cover"
+                />
+              </div>
+            )}
+
+            <p className="text-sm text-muted-foreground">
+              <span>{content.subject}</span>, <span>{content.role}</span> -{" "}
+              {devYear && <span>{devYear}</span>}
+              {inDevelopment && <span>{dictionary.inDevelopment}</span>}
+            </p>
+          </div>
+
+          <div className="flex flex-col gap-4">
+            <div className="flex flex-col gap-1">
+              <h3 className="text-xs font-medium uppercase tracking-wider">
+                {dictionary.context}
+              </h3>
+              <p className="leading-relaxed text-muted-foreground">
+                {content.context}
+              </p>
             </div>
-          )}
+
+            <div className="flex flex-col gap-1">
+              <h3 className="text-xs font-medium uppercase tracking-wider">
+                {dictionary.approach}
+              </h3>
+              <p className="leading-relaxed text-muted-foreground">
+                {content.approach}
+              </p>
+            </div>
+
+            <div className="flex flex-col gap-1">
+              <h3 className="text-xs font-medium uppercase tracking-wider">
+                {dictionary.result}
+              </h3>
+              <p className="leading-relaxed text-muted-foreground">
+                {content.result}
+              </p>
+            </div>
+          </div>
 
           <div className="flex flex-wrap gap-2">
             {technologies.map((technology) => (
@@ -125,19 +185,27 @@ export default function ProjectDialogCard({
             ))}
           </div>
 
-          <div className="grid gap-4 sm:grid-cols-2">
-            <div>
-              <p className="text-sm font-medium">Role</p>
-              <p className="text-sm text-muted-foreground">{content.role}</p>
+          {links && (
+            <div className="flex flex-row gap-3">
+              {links.demo && (
+                <a
+                  className={buttonVariants({ variant: "default", size: "lg" })}
+                >
+                  Visit website {<ArrowUpRight />}
+                </a>
+              )}
+              {links.source && (
+                <a
+                  className={buttonVariants({
+                    variant: "secondary",
+                    size: "lg",
+                  })}
+                >
+                  GitHub {<ArrowUpRight />}
+                </a>
+              )}
             </div>
-
-            {devYear && (
-              <div>
-                <p className="text-sm font-medium">Year</p>
-                <p className="text-sm text-muted-foreground">{devYear}</p>
-              </div>
-            )}
-          </div>
+          )}
         </div>
       </DialogContent>
     </Dialog>

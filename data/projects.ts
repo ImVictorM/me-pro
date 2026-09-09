@@ -40,13 +40,7 @@ export type ProjectData = {
 export const PROJECTS = {
   cantinho: {
     cover: cantinhoCover,
-    images: [
-      cantinhoCover,
-      cantinhoAbout,
-      cantinhoGallery,
-      cantinhoCTA,
-      cantinhoContact,
-    ],
+    images: [cantinhoAbout, cantinhoGallery, cantinhoCTA, cantinhoContact],
     technologies: ["React", "TypeScript", "Tailwind"],
     inDevelopment: false,
     links: {
@@ -56,13 +50,7 @@ export const PROJECTS = {
   },
   meerkat: {
     cover: meerkatCover,
-    images: [
-      meerkatCover,
-      meerkatAuth,
-      meerkatTablets,
-      meerkatProduct,
-      meerkatComm,
-    ],
+    images: [meerkatAuth, meerkatTablets, meerkatProduct, meerkatComm],
     technologies: ["React", "Tailwind", "NodeJS", "Express", "MongoDB"],
     inDevelopment: false,
     links: {
@@ -72,13 +60,13 @@ export const PROJECTS = {
   },
   tocata: {
     cover: tocataCover,
-    images: [tocataCover],
+    images: [],
     technologies: ["React Native", "TypeScript", "Expo"],
     inDevelopment: true,
   },
   ecommerce: {
     cover: ecommerceCover,
-    images: [ecommerceCover],
+    images: [],
     technologies: ["C#", "ASP.NET Core", "Entity Framework Core", "PostgreSQL"],
     inDevelopment: false,
     links: {
@@ -88,13 +76,7 @@ export const PROJECTS = {
   },
   meAndroid: {
     cover: meAndroidCover,
-    images: [
-      meAndroidCover,
-      meAndroidIntro,
-      meAndroidAbout,
-      meAndroidExp,
-      meAndroidSkills,
-    ],
+    images: [meAndroidIntro, meAndroidAbout, meAndroidExp, meAndroidSkills],
     technologies: ["React", "TypeScript", "Tailwind"],
     inDevelopment: false,
     links: {
@@ -105,7 +87,7 @@ export const PROJECTS = {
   },
   trivia: {
     cover: triviaCover,
-    images: [triviaCover, triviaEnter, triviaWellDone, triviaRanking],
+    images: [triviaEnter, triviaWellDone, triviaRanking],
     technologies: ["React", "TypeScript", "Styled Components"],
     inDevelopment: false,
     links: {

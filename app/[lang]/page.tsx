@@ -152,7 +152,10 @@ export default async function Home() {
               >
                 {projects.map(({ id, ...project }) => (
                   <li className="group" key={id}>
-                    <ProjectDialogCard project={project} />
+                    <ProjectDialogCard
+                      project={project}
+                      dictionary={dict.projects.details}
+                    />
                   </li>
                 ))}
               </ul>

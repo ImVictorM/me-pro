@@ -20,6 +20,8 @@ export type ContactFormDictionary = Dictionary["contact"]["form"];
 
 export type DictionaryHeader = Dictionary["header"];
 
+export type DictionaryProjectDetails = Dictionary["projects"]["details"];
+
 export const hasLocale = (locale: string): locale is LocaleDictionary =>
   locale in dicts;
 
