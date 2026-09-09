@@ -1,5 +1,13 @@
 "use client";
 
+import { ComponentProps, useEffect, useRef, useState } from "react";
+import Image from "next/image";
+import type { StaticImageData } from "next/image";
+import { ArrowRight, ArrowUpRight } from "lucide-react";
+
+import type { ProjectData } from "@/data/projects";
+import { DictionaryProjectDetails } from "@/app/[lang]/dictionaries";
+
 import {
   Dialog,
   DialogContent,
@@ -17,13 +25,15 @@ import {
 } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 
-import Image from "next/image";
-import type { ProjectData } from "@/data/projects";
-import type { StaticImageData } from "next/image";
-import { ComponentProps } from "react";
-import { DictionaryProjectDetails } from "@/app/[lang]/dictionaries";
 import { buttonVariants } from "@/components/ui/button";
-import { ArrowUpRight } from "lucide-react";
+import {
+  Carousel,
+  CarouselApi,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 
 type ProjectCardContent = {
   title: string;
@@ -48,6 +58,11 @@ export type ProjectDialogCardProps = {
     content: ProjectDialogContent;
   };
   dictionary: DictionaryProjectDetails;
+};
+
+type ProjectImageCarouselProps = {
+  images: StaticImageData[];
+  title: string;
 };
 
 function ProjectCard({
@@ -75,7 +90,7 @@ function ProjectCard({
         />
       </div>
 
-      <CardHeader className="flex flex-col gap-2">
+      <CardHeader className="flex flex-col gap-2 grow">
         <div className="flex flex-col">
           <CardTitle>{title}</CardTitle>
 
@@ -85,8 +100,84 @@ function ProjectCard({
         <CardAction className="flex flex-row gap-2">
           <Badge variant="secondary">{subject}</Badge>
         </CardAction>
+
+        <p className="w-full mt-auto justify-end flex flex-row items-center text-primary gap-1 text-xs">
+          Click to see {<ArrowRight size={14} />}
+        </p>
       </CardHeader>
     </Card>
+  );
+}
+
+function ProjectImageCarousel({ images, title }: ProjectImageCarouselProps) {
+  const [api, setApi] = useState<CarouselApi>();
+
+  const [loadedSlides, setLoadedSlides] = useState<Set<number>>(
+    () => new Set([0]),
+  );
+
+  useEffect(() => {
+    if (!api) return;
+
+    const loadVisibleSlides = (carouselApi: CarouselApi) => {
+      const visibleSlides = carouselApi?.slidesInView();
+
+      setLoadedSlides((curr) => {
+        const next = new Set(curr);
+
+        visibleSlides?.forEach((index) => {
+          next.add(index);
+        });
+
+        return next;
+      });
+    };
+
+    loadVisibleSlides(api);
+
+    api.on("slidesInView", loadVisibleSlides);
+
+    return () => {
+      api.off("slidesInView", loadVisibleSlides);
+    };
+  }, [api]);
+
+  if (images.length === 0) return;
+
+  return (
+    <Carousel
+      setApi={setApi}
+      className="w-full"
+      opts={{ align: "start", loop: images.length > 1 }}
+    >
+      <CarouselContent>
+        {images.map((img, index) => (
+          <CarouselItem key={img.src}>
+            <div className="relative aspect-video overflow-hidden rounded-lg bg-muted">
+              {loadedSlides.has(index) ? (
+                <Image
+                  src={img}
+                  alt={`${title} - screenshot ${index + 1}`}
+                  className="size-full object-cover"
+                />
+              ) : (
+                <div
+                  aria-hidden="true"
+                  className="size-full animate-pulse bg-muted"
+                />
+              )}
+            </div>
+          </CarouselItem>
+        ))}
+      </CarouselContent>
+
+      {images.length > 1 && (
+        <>
+          <CarouselPrevious variant="secondary" className="left-3" />{" "}
+          <CarouselNext variant="secondary" className="right-3" />
+        </>
+      )}
+    </Carousel>
   );
 }
 
@@ -102,8 +193,11 @@ export default function ProjectDialogCard({
   },
   dictionary,
 }: ProjectDialogCardProps) {
+  const [open, setOpen] = useState(false);
+  const dialogContentRef = useRef<HTMLDivElement>(null);
+
   return (
-    <Dialog>
+    <Dialog open={open} onOpenChange={setOpen}>
       <DialogTrigger
         nativeButton={false}
         render={
@@ -118,7 +212,11 @@ export default function ProjectDialogCard({
         }
       />
 
-      <DialogContent className="max-h-[90dvh] overflow-y-auto scrollbar-none sm:max-w-3xl">
+      <DialogContent
+        ref={dialogContentRef}
+        initialFocus={dialogContentRef}
+        className="max-h-[90dvh] overflow-y-auto scrollbar-none sm:max-w-3xl"
+      >
         <DialogHeader>
           <DialogTitle className="text-3xl font-bold dash mb-4">
             {content.title}
@@ -131,14 +229,11 @@ export default function ProjectDialogCard({
 
         <div className="flex flex-col gap-6">
           <div className="flex flex-col gap-2">
-            {cover && (
-              <div className="relative aspect-video overflow-hidden rounded-lg">
-                <Image
-                  src={cover}
-                  alt={`${content.title} project preview`}
-                  className="size-full object-cover"
-                />
-              </div>
+            {open && (
+              <ProjectImageCarousel
+                images={[cover, ...images]}
+                title={content.title}
+              />
             )}
 
             <p className="text-sm text-muted-foreground">
@@ -189,6 +284,9 @@ export default function ProjectDialogCard({
             <div className="flex flex-row gap-3">
               {links.demo && (
                 <a
+                  href={links.demo}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className={buttonVariants({ variant: "default", size: "lg" })}
                 >
                   Visit website {<ArrowUpRight />}
@@ -196,6 +294,9 @@ export default function ProjectDialogCard({
               )}
               {links.source && (
                 <a
+                  href={links.source}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className={buttonVariants({
                     variant: "secondary",
                     size: "lg",

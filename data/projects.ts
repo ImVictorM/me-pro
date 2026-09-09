@@ -1,4 +1,4 @@
-import cantinhoCover from "@/assets/images/cantinho/cantinhoAbout.webp";
+import cantinhoCover from "@/assets/images/cantinho/cantinhoCover.webp";
 import cantinhoAbout from "@/assets/images/cantinho/cantinhoAbout.webp";
 import cantinhoGallery from "@/assets/images/cantinho/cantinhoGallery.webp";
 import cantinhoCTA from "@/assets/images/cantinho/cantinhoCTA.webp";

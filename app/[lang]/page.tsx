@@ -126,7 +126,7 @@ export default async function Home() {
                         prefetch={false}
                         href={`#${APP_SECTIONS.contact}`}
                       >
-                        {dict.services.cta} {<ArrowRight size={16} />}
+                        {dict.services.cta} {<ArrowRight size={14} />}
                       </Link>
                     </CardFooter>
                   </Card>
