@@ -8,6 +8,8 @@ import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { APP_SECTIONS } from "@/data";
 import { DictionaryHeader } from "@/app/[lang]/dictionaries";
+import { ThemeToggle } from "../ThemeToggle";
+import { LanguageSwitcher } from "../LanguageSwitcher";
 
 type MobileNavigationProps = {
   dictionary: DictionaryHeader;
@@ -52,53 +54,60 @@ export default function MobileNavigation({
           aria-hidden={!open}
           inert={!open}
         >
-          <nav className="max-w-layout border-y pl-10 px-5 py-6 shadow-lg">
-            <ul className="flex flex-col">
-              <li>
-                <Link
-                  href={`#${APP_SECTIONS.services}`}
-                  onClick={closeMenu}
-                  className="block py-4 font-medium hover:text-primary"
-                  prefetch={false}
-                >
-                  {dictionary.navigationList.services}
-                </Link>
-              </li>
+          <div className="max-w-layout border-y pl-10 px-5 py-6 shadow-lg">
+            <nav>
+              <ul className="flex flex-col ">
+                <li>
+                  <Link
+                    href={`#${APP_SECTIONS.services}`}
+                    onClick={closeMenu}
+                    className="block py-4 font-medium hover:text-primary"
+                    prefetch={false}
+                  >
+                    {dictionary.navigationList.services}
+                  </Link>
+                </li>
 
-              <li>
-                <Link
-                  href={`#${APP_SECTIONS.projects}`}
-                  onClick={closeMenu}
-                  className="block py-4 font-medium hover:text-primary"
-                  prefetch={false}
-                >
-                  {dictionary.navigationList.work}
-                </Link>
-              </li>
+                <li>
+                  <Link
+                    href={`#${APP_SECTIONS.projects}`}
+                    onClick={closeMenu}
+                    className="block py-4 font-medium hover:text-primary"
+                    prefetch={false}
+                  >
+                    {dictionary.navigationList.work}
+                  </Link>
+                </li>
 
-              <li>
-                <Link
-                  href={`#${APP_SECTIONS.benefits}`}
-                  onClick={closeMenu}
-                  className="block py-4 font-medium hover:text-primary"
-                  prefetch={false}
-                >
-                  {dictionary.navigationList.about}
-                </Link>
-              </li>
+                <li>
+                  <Link
+                    href={`#${APP_SECTIONS.benefits}`}
+                    onClick={closeMenu}
+                    className="block py-4 font-medium hover:text-primary"
+                    prefetch={false}
+                  >
+                    {dictionary.navigationList.about}
+                  </Link>
+                </li>
 
-              <li>
-                <Link
-                  href={`#${APP_SECTIONS.contact}`}
-                  onClick={closeMenu}
-                  className="block py-4 font-medium hover:text-primary"
-                  prefetch={false}
-                >
-                  {dictionary.navigationList.contact}
-                </Link>
-              </li>
-            </ul>
-          </nav>
+                <li>
+                  <Link
+                    href={`#${APP_SECTIONS.contact}`}
+                    onClick={closeMenu}
+                    className="block py-4 font-medium hover:text-primary"
+                    prefetch={false}
+                  >
+                    {dictionary.navigationList.contact}
+                  </Link>
+                </li>
+              </ul>
+            </nav>
+
+            <div className="flex justify-end items-center gap-4 mt-4">
+              <LanguageSwitcher />
+              <ThemeToggle />
+            </div>
+          </div>
         </div>
       }
     </>

@@ -13,7 +13,7 @@ export default function ScrollableWrapper({ children }: PropsWithChildren) {
 
   return (
     <div
-      className={`fixed top-0 inset-x-0 z-50  ${isScrolled ? "sm:bg-background/80 sm:backdrop-blur-md" : "sm:bg-transparent"} bg-background backdrop-blur-none border-b sm:border-b-0`}
+      className={`fixed top-0 inset-x-0 z-50  ${isScrolled ? "md:bg-background/80 md:backdrop-blur-md" : "md:bg-transparent"} bg-background backdrop-blur-none border-b md:border-b-0`}
     >
       {children}
     </div>

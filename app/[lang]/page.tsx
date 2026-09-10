@@ -53,7 +53,7 @@ export default async function Home() {
             </p>
 
             <div data-reveal-hero className="flex flex-col mt-4 gap-6">
-              <div className="flex gap-4">
+              <div className="w-full flex-col flex sm:flex-row gap-4">
                 <Button
                   nativeButton={false}
                   render={
