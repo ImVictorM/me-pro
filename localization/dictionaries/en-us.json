@@ -11,5 +11,216 @@
     "cta": {
       "startProject": "Start a project"
     }
+  },
+  "hero": {
+    "title": "Digital solution for your business",
+    "subtitle": "Websites, systems and applications developed according to the needs of your business",
+    "cta": {
+      "primaryAction": "Start a project",
+      "secondaryAction": "View projects"
+    }
+  },
+  "services": {
+    "title": "Services",
+    "description": "From a professional online presence to custom software, I build solutions around the needs of your business",
+    "items": [
+      {
+        "title": "Websites & landing pages",
+        "description": "Fast, responsive websites designed to present your business clearly and turn visits into opportunities"
+      },
+      {
+        "title": "Custom web applications",
+        "description": "Tailored systems built around your business processes, goals, and day-to-day needs"
+      },
+      {
+        "title": "Mobile applications",
+        "description": "Android applications built for your use case and prepared for publication on Google Play"
+      },
+      {
+        "title": "Maintenance and improvements",
+        "description": "Already have something? I can fix issues, improve performance and usability, and help it evolve"
+      }
+    ],
+    "cta": "Contact about service"
+  },
+  "projects": {
+    "title": "Selected work",
+    "description": "A selection of projects and contributions. Click them to learn more about",
+    "items": {
+      "cantinho": {
+        "title": "Cantinho dos bordados",
+        "description": "Landing page for local business of custom embroidery",
+        "role": "Freelance developer",
+        "subject": "Landing page",
+        "context": "Cantinho dos Bordados is a small embroidery studio that relied mainly on direct contact through Instagram and WhatsApp to present its work and reach new customers",
+        "approach": "I created a dedicated landing page to strengthen the studio's online presence, better present its services and work, and connect the website with the social channels its customers already used",
+        "result": "The website gave the studio a more professional digital presence and made it easier to discover through search engines, while reinforcing its visual identity and providing another channel for attracting new customers"
+      },
+      "meerkat": {
+        "title": "Meerkat",
+        "description": "Electronics-focused marketplace with a security layer between transactions",
+        "role": "Full Stack developer",
+        "subject": "Marketplace",
+        "context": "Meerkat started as an idea for a new business. I was invited to help develop important marketplace flows, including purchases, exchanges, cancellations, and other parts of the transaction process",
+        "approach": "The solution was designed as a marketplace where people can buy and sell products through a simple and safer process. A mediation layer was introduced into the transaction flow to help prevent fraudulent purchases from reaching the final customer",
+        "result": "The project evolved from an initial business idea into a structured marketplace with its main transaction flows defined and implemented. It is currently being prepared for launch toward the end of 2026"
+      },
+      "tocata": {
+        "title": "Tocata",
+        "description": "Music practice application for mobile devices",
+        "role": "Freelance developer",
+        "subject": "Mobile",
+        "context": "The idea came from a problem I experienced while practicing guitar. Repeating a specific part of a song required constantly moving the mouse back to the same timestamp, and the tools I was using did not provide a convenient way to slow the music down for practice",
+        "approach": "I first created a web version called RewindIt to validate the idea. After using it, I realized that a mobile experience would be better suited to this type of interaction, so I started rebuilding the application for mobile, renamed it Tocata, and created a new visual identity around the product",
+        "result": "Tocata is currently in development and is planned for release by the end of 2026. The project is evolving from a tool created for my own practice into an application designed to make music practice more convenient for other people as well"
+      },
+      "ecommerce": {
+        "title": "ECommerce management",
+        "description": "API for managing online commerce following best practices of architecture",
+        "role": "Back-End developer",
+        "subject": "Architectural study",
+        "context": "I created this project to deepen my understanding of software architecture by putting concepts from Clean Architecture and Domain-Driven Design into practice",
+        "approach": "I modeled the core domain of a basic e-commerce system and used the project to explore concepts such as Domain-Driven Design, Clean Architecture, CQRS, SOLID, and other architectural and design patterns",
+        "result": "The project gave me a stronger foundation in software architecture and helped me apply these concepts more confidently in other projects, improving both code quality and the way I reason about software systems as a whole"
+      },
+      "meAndroid": {
+        "title": "Me android",
+        "description": "Interactive portfolio inspired by the design of Nier:Automata",
+        "role": "Front-End developer",
+        "subject": "Interactive portfolio",
+        "context": "The project was inspired by NieR:Automata, a game whose visual language and interface design I find particularly interesting. I wanted to explore those ideas by creating an interactive portfolio based on the game's aesthetic and atmosphere",
+        "approach": "Using React and Tailwind CSS, I created a minimalist and interactive website that presents my work through a fictional character instead of following the structure of a traditional portfolio. In the experience, I introduce myself as an android named 7V",
+        "result": "The result is an unconventional portfolio that combines a minimalist interface, interactive elements, and a strong visual concept to create a more memorable way of presenting my work"
+      },
+      "trivia": {
+        "title": "Trivia game",
+        "description": "Web game in the quiz style with various topics and local ranking",
+        "role": "Front-End developer",
+        "subject": "Web game",
+        "context": "The project started as a study exercise focused on building a complete question-and-answer game for the web",
+        "approach": "I created a simple and accessible quiz experience where players can test their general or topic-specific knowledge and receive a score at the end of each game, with results recorded in a local ranking",
+        "result": "The result is a lightweight and easy-to-play web game that combines a straightforward interface with a complete quiz flow and local score tracking"
+      }
+    },
+    "details": {
+      "context": "Context",
+      "approach": "Approach",
+      "result": "Result",
+      "inDevelopment": "In development"
+    }
+  },
+  "about": {
+    "benefitsSection": {
+      "title": "Why work with me",
+      "description": "Direct communication, faster decisions, and a simpler way to turn your idea into a solution",
+      "benefits": [
+        {
+          "title": "Direct communication",
+          "description": "Talk directly with the person responsible for building your solution"
+        },
+        {
+          "title": "Faster decisions",
+          "description": "Make decisions and adjustments quickly, without unnecessary bureaucratic layers"
+        },
+        {
+          "title": "Transparent pricing",
+          "description": "Clear project costs from the beginning, without unexpected charges"
+        },
+        {
+          "title": "Modern solutions",
+          "description": "Technologies selected according to the needs of your project"
+        }
+      ]
+    },
+    "workProcessSection": {
+      "title": "From the first message to project delivery",
+      "description": "A clear process from the first conversation to delivery and ongoing support",
+      "items": [
+        {
+          "title": "Project understanding",
+          "description": "Share basic information about your business, needs, and project goals"
+        },
+        {
+          "title": "Initial planning",
+          "description": "Alignment of expectations using a basic document with the project scope"
+        },
+        {
+          "title": "Development",
+          "description": "Build the project according to the agreed scope and requirements"
+        },
+        {
+          "title": "Frequent updates",
+          "description": "Regular updates and feedback opportunities to keep the project aligned with your expectations"
+        },
+        {
+          "title": "Delivery",
+          "description": "Release the completed and tested project, ready for use"
+        },
+        {
+          "title": "Post-delivery relationship",
+          "description": "Optional hosting, ongoing support, maintenance, and future improvements after delivery"
+        }
+      ]
+    }
+  },
+
+  "contact": {
+    "form": {
+      "title": "Tell me your idea",
+      "description": "Tell me what you need and a little about your project. I'll get back to you with the next steps and how I can help in under 24 hours",
+      "data": {
+        "email": "Email",
+        "phone": "WhatsApp",
+        "location": "Location",
+        "country": "Brazil"
+      },
+      "fullname": {
+        "label": "Full name",
+        "placeholder": "Insert your full name",
+        "minError": "Full name should be at least {min} characters long",
+        "maxError": "Full name should be at most {max} characters long"
+      },
+      "email": {
+        "label": "Email",
+        "placeholder": "you@example.com",
+        "invalidError": "Enter a valid email address"
+      },
+      "projectType": {
+        "label": "Project type",
+        "placeholder": "Select a project type",
+        "options": {
+          "landing-page": "Landing page",
+          "website": "Custom website",
+          "ecommerce": "E-commerce",
+          "web-app": "Web application",
+          "mobile": "Mobile application",
+          "automation": "Automation",
+          "other": "Other"
+        }
+      },
+      "approximateInvestment": {
+        "label": "Approximate investment",
+        "placeholder": "Select a range",
+        "options": {
+          "under-1k": "Up to R$1.000,00",
+          "1-5k": "R$1.000,00 to R$5.000,00",
+          "5k-10k": "R$5.000,00 - R$10.000,00",
+          "10k-20k": "R$10.000,00 - R$20.000,00",
+          "20k-plus": "More than R$20.000,00",
+          "not-sure": "I'm not sure yet"
+        }
+      },
+      "projectDetails": {
+        "label": "Project details",
+        "placeholder": "Tell me a little about your project...",
+        "minError": "Project details should be at least {min} characters long",
+        "maxError": "Project details should be at most {max} characters long"
+      },
+      "submit": "Send message",
+      "availability": "Available for new work",
+      "whatsapp": {
+        "intro": "Hi! I'm contacting you through your website"
+      }
+    }
   }
 }

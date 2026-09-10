@@ -11,5 +11,216 @@
     "cta": {
       "startProject": "Começar um projeto"
     }
+  },
+  "hero": {
+    "title": "Solução digital para o seu negócio",
+    "subtitle": "Websites, sistemas e aplicativos desenvolvidos de acordo com as necessidades do seu negócio",
+    "cta": {
+      "primaryAction": "Começar um projeto",
+      "secondaryAction": "Ver projetos"
+    }
+  },
+  "services": {
+    "title": "Serviços",
+    "description": "Da presença digital ao software sob medida, desenvolvo soluções de acordo com as necessidades do seu negócio",
+    "items": [
+      {
+        "title": "Websites & landing pages",
+        "description": "Sites rápidos e responsivos, pensados para apresentar seu negócio com clareza e transformar visitas em oportunidades"
+      },
+      {
+        "title": "Aplicações web personalizadas",
+        "description": "Sistemas desenvolvidos de acordo com os processos, objetivos e necessidades diária do seu negócio"
+      },
+      {
+        "title": "Aplicativos mobile",
+        "description": "Aplicativos Android desenvolvidos para o seu caso de uso e preparados para publicação na Google Play"
+      },
+      {
+        "title": "Manutenção e melhorias",
+        "description": "Já possui algo? Posso corrigir problemas, melhorar desempenho e usabilidade e ajudar sua solução a evoluir"
+      }
+    ],
+    "cta": "Falar sobre serviço"
+  },
+  "projects": {
+    "title": "Trabalhos selecionados",
+    "description": "Seleção de projetos e contribuições. Clique para saber mais sobre",
+    "items": {
+      "cantinho": {
+        "title": "Cantinho dos bordados",
+        "description": "Landing page para negócio local de bordados personalizados",
+        "role": "Desenvolvedor autônomo",
+        "subject": "Landing page",
+        "context": "O Cantinho dos Bordados é um pequeno ateliê de bordados que dependia principalmente do contato direto pelo Instagram e WhatsApp para apresentar seus trabalhos e alcançar novos clientes",
+        "approach": "Criei uma landing page própria para fortalecer a presença online do ateliê, apresentar melhor seus serviços e trabalhos e integrar o website aos canais sociais que seus clientes já utilizavam",
+        "result": "O website trouxe uma presença digital mais profissional para o ateliê e facilitou sua descoberta por mecanismos de busca, além de reforçar sua identidade visual e criar mais um canal para atrair novos clientes"
+      },
+      "meerkat": {
+        "title": "Meerkat",
+        "description": "Marketplace focado em eletrônicos com camada de segurança entre negociações",
+        "role": "Desenvolvedor full stack",
+        "subject": "Marketplace",
+        "context": "A Meerkat surgiu a partir da ideia de um novo negócio. Fui convidado para ajudar a desenvolver fluxos importantes do marketplace, incluindo compras, trocas, cancelamentos e outras etapas do processo de negociação",
+        "approach": "A solução foi estruturada como um marketplace onde pessoas podem comprar e vender produtos por meio de um processo simples e mais seguro. Uma camada de mediação foi adicionada ao fluxo de negociação para ajudar a impedir que compras fraudulentas cheguem ao cliente final",
+        "result": "O projeto evoluiu de uma ideia inicial de negócio para um marketplace estruturado, com seus principais fluxos de negociação definidos e implementados. Atualmente, está sendo preparado para lançamento no final de 2026"
+      },
+      "tocata": {
+        "title": "Tocata",
+        "description": "Aplicativo de música para dispositivos móveis",
+        "role": "Desenvolvedor autônomo",
+        "subject": "Mobile",
+        "context": "A ideia surgiu de um problema que eu encontrava ao praticar guitarra. Para repetir uma parte específica de uma música, precisava mover constantemente o mouse de volta para o mesmo trecho, além de não ter uma forma prática de reduzir a velocidade da música para estudar",
+        "approach": "Primeiro criei uma versão web chamada RewindIt para validar a ideia. Depois de utilizá-la, percebi que uma experiência mobile seria mais adequada para esse tipo de interação, então comecei a reconstruir a aplicação para dispositivos móveis, renomeei o projeto para Tocata e criei uma nova identidade visual para o produto",
+        "result": "O Tocata ainda está em desenvolvimento e tem lançamento previsto para o final de 2026. O projeto está evoluindo de uma ferramenta criada para atender uma necessidade minha para uma aplicação pensada para tornar a prática musical mais conveniente para outras pessoas também"
+      },
+      "ecommerce": {
+        "title": "ECommerce management",
+        "description": "API para gestão de comércio eletrônico seguindo boas práticas de arquitetura",
+        "role": "Desenvolvedor back-end",
+        "subject": "Estudo arquitetural",
+        "context": "Criei este projeto para aprofundar meus conhecimentos em arquitetura de software, colocando em prática conceitos estudados em Clean Architecture e Domain-Driven Design",
+        "approach": "Modelei o domínio principal de um e-commerce básico e utilizei o projeto para explorar conceitos como Domain-Driven Design, Clean Architecture, CQRS, SOLID e outros padrões de arquitetura e projeto",
+        "result": "O projeto me proporcionou uma base mais sólida em arquitetura de software e me ajudou a aplicar esses conceitos com mais segurança em outros projetos, melhorando tanto a qualidade do código quanto minha visão de software como um todo"
+      },
+      "meAndroid": {
+        "title": "Me android",
+        "description": "Portfólio interativo inspirado no ema de Nier:Automata",
+        "role": "Desenvolvedor front-end",
+        "subject": "Portfólio interativo",
+        "context": "O projeto foi inspirado em NieR:Automata, um jogo cuja linguagem visual e design de interface considero particularmente interessantes. Quis explorar essas ideias criando um portfólio interativo baseado na estética e atmosfera do jogo",
+        "approach": "Utilizando React e Tailwind CSS, criei um website minimalista e interativo que apresenta meu trabalho por meio de um personagem fictício, em vez de seguir a estrutura de um portfólio tradicional. Na experiência, me apresento como um androide chamado 7V",
+        "result": "O resultado é um portfólio fora do padrão que combina uma interface minimalista, elementos interativos e um conceito visual marcante para criar uma forma mais memorável de apresentar meu trabalho"
+      },
+      "trivia": {
+        "title": "Trivia game",
+        "description": "Jogo web no estilo quiz com tópicos variados e ranking local",
+        "role": "Desenvolvedor front-end",
+        "subject": "Jogo web",
+        "context": "O projeto começou como um exercício de estudo focado na criação de um jogo completo de perguntas e respostas para a web",
+        "approach": "Criei uma experiência simples e acessível de quiz, onde o jogador pode testar conhecimentos gerais ou sobre temas específicos e receber uma pontuação ao final de cada partida, com os resultados registrados em um ranking local",
+        "result": "O resultado é um jogo web leve e fácil de jogar, que combina uma interface direta com um fluxo completo de quiz e acompanhamento local das pontuações"
+      }
+    },
+    "details": {
+      "context": "Contexto",
+      "approach": "Abordagem",
+      "result": "Resultado",
+      "inDevelopment": "Em desenvolvimento"
+    }
+  },
+  "about": {
+    "benefitsSection": {
+      "title": "Por que trabalhar comigo",
+      "description": "Comunicação direta, decisões mais rápidas e uma forma mais simples de transformar sua ideia em uma solução",
+      "benefits": [
+        {
+          "title": "Comunicação direta",
+          "description": "Fale diretamente com a pessoa responsável por desenvolver sua solução"
+        },
+        {
+          "title": "Decisões mais rápidas",
+          "description": "Tome decisões e faça ajustes com agilidade, sem camadas burocráticas desnecessárias"
+        },
+        {
+          "title": "Preços transparentes",
+          "description": "Custos do projeto definidos com clareza desde o início, sem cobranças inesperadas"
+        },
+        {
+          "title": "Soluções modernas",
+          "description": "Tecnologias escolhidas de acordo com as necessidades do seu projeto"
+        }
+      ]
+    },
+    "workProcessSection": {
+      "title": "Da primeira mensagem à entrega do projeto",
+      "description": "Processo claro desde o primeiro contato até a entrega e suporte contínuo",
+      "items": [
+        {
+          "title": "Entendimento do projeto",
+          "description": "Compartilhe informações básicas sobre seu negócio, suas necessidades e os objetivos do projeto"
+        },
+        {
+          "title": "Planejamento inicial",
+          "description": "Alinhamento de expectativas por meio de um documento simples com o escopo do projeto"
+        },
+        {
+          "title": "Desenvolvimento",
+          "description": "Construção do projeto de acordo com o escopo e os requisitos definidos"
+        },
+        {
+          "title": "Atualizações frequentes",
+          "description": "Atualizações regulares e oportunidades de feedback para manter o projeto alinhado às suas expectativas"
+        },
+        {
+          "title": "Entrega",
+          "description": "Entrega do projeto concluído, testado e pronto para uso"
+        },
+        {
+          "title": "Relacionamento pós-entrega",
+          "description": "Hospedagem opcional, suporte contínuo, manutenção e futuras melhorias após a entrega"
+        }
+      ]
+    }
+  },
+
+  "contact": {
+    "form": {
+      "title": "Conte-me sua ideia",
+      "description": "Conte o que você precisa e um pouco sobre o seu projeto. Entrarei em contato com os próximos passos e como posso ajudar em menos de 24 horas",
+      "data": {
+        "email": "E-mail",
+        "phone": "WhatsApp",
+        "location": "Localização",
+        "country": "Brasil"
+      },
+      "fullname": {
+        "label": "Nome completo",
+        "placeholder": "Insira seu nome completo",
+        "minError": "O nome completo deve ter pelo menos {min} caracteres",
+        "maxError": "O nome completo deve ter no máximo {max} caracteres"
+      },
+      "email": {
+        "label": "E-mail",
+        "placeholder": "voce@exemplo.com",
+        "invalidError": "Insira um endereço de e-mail válido"
+      },
+      "projectType": {
+        "label": "Tipo de projeto",
+        "placeholder": "Selecione um tipo de projeto",
+        "options": {
+          "landing-page": "Landing page",
+          "website": "Site personalizado",
+          "ecommerce": "E-commerce",
+          "web-app": "Aplicação web",
+          "mobile": "Aplicativo mobile",
+          "automation": "Automação",
+          "other": "Outro"
+        }
+      },
+      "approximateInvestment": {
+        "label": "Investimento aproximado",
+        "placeholder": "Selecione uma faixa",
+        "options": {
+          "under-1k": "Até R$1.000,00",
+          "1-5k": "R$1.000,00 a R$5.000,00",
+          "5k-10k": "R$5.000,00 a R$10.000,00",
+          "10k-20k": "R$10.000,00 a R$20.000,00",
+          "20k-plus": "Mais de R$20.000,00",
+          "not-sure": "Ainda não tenho certeza"
+        }
+      },
+      "projectDetails": {
+        "label": "Detalhes do projeto",
+        "placeholder": "Conte um pouco sobre o seu projeto...",
+        "minError": "Os detalhes do projeto devem ter pelo menos {min} caracteres",
+        "maxError": "Os detalhes do projeto devem ter no máximo {max} caracteres"
+      },
+      "submit": "Enviar mensagem",
+      "availability": "Disponível para novos trabalhos",
+      "whatsapp": {
+        "intro": "Olá! Estou entrando em contato através do seu site"
+      }
+    }
   }
 }
