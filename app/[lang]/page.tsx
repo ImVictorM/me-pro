@@ -180,41 +180,43 @@ export default async function Home() {
             className="section"
             data-reveal-section
           >
-            <div className="mx-auto max-w-225 flex flex-col sm:items-center">
-              <div className="flex flex-col items-center">
-                <h2 data-reveal>
-                  <span className="block w-fit section-title">
-                    {dict.about.benefitsSection.title}
-                  </span>
+            <div className="grid gap-16 lg:grid-cols-[minmax(0,0.8fr)_minmax(0,1.2fr)] lg:gap-24">
+              <div className="lg:sticky lg:top-32 lg:self-start">
+                <h2 data-reveal className="section-title">
+                  {dict.about.benefitsSection.title}
                 </h2>
 
                 <p
                   data-reveal
-                  className="section-description text-center max-w-xl"
+                  className="max-w-md text-lg leading-relaxed text-muted-foreground"
                 >
                   {dict.about.benefitsSection.description}
                 </p>
               </div>
-            </div>
 
-            <ul
-              data-reveal
-              className="grid grid-cols-1 gap-12 md:grid-cols-2 mt-2"
-            >
-              {dict.about.benefitsSection.benefits.map(
-                ({ description, title }, index) => (
-                  <li
-                    className="border-l border-muted-foreground pl-5 py-2"
-                    key={index}
-                  >
-                    <div>
-                      <h3 className="text-lg mb-2 sm:text-xl">{title}</h3>
-                      <p className="text-muted-foreground">{description}</p>
-                    </div>
-                  </li>
-                ),
-              )}
-            </ul>
+              <ul data-reveal className="divide-y divide-border">
+                {dict.about.benefitsSection.benefits.map(
+                  ({ title, description }, index) => (
+                    <li
+                      key={title}
+                      className="grid gap-4 py-8 first:pt-0 sm:grid-cols-[3rem_1fr]"
+                    >
+                      <span className="font-mono text-sm text-primary">
+                        {String(index + 1).padStart(2, "0")}
+                      </span>
+
+                      <div>
+                        <h3 className="text-xl font-medium">{title}</h3>
+
+                        <p className="mt-2 max-w-lg leading-relaxed text-muted-foreground">
+                          {description}
+                        </p>
+                      </div>
+                    </li>
+                  ),
+                )}
+              </ul>
+            </div>
           </section>
 
           {/* About 2 */}
