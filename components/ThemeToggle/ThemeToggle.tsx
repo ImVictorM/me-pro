@@ -4,12 +4,21 @@ import { cn } from "@/lib/utils";
 import { Button } from "../ui/button";
 import { useTheme } from "next-themes";
 import { MoonStar, Sun } from "lucide-react";
-import { useMemo } from "react";
+import { useEffect, useMemo, useState } from "react";
 
 export default function ThemeToggle() {
+  const [mounted, setMounted] = useState(false);
   const { setTheme, resolvedTheme } = useTheme();
 
   const isLight = useMemo(() => resolvedTheme === "light", [resolvedTheme]);
+
+  useEffect(() => {
+    function handleSetMounted() {
+      setMounted(true);
+    }
+
+    handleSetMounted();
+  }, []);
 
   const handleThemeToggle = () => {
     if (isLight) {
@@ -19,6 +28,10 @@ export default function ThemeToggle() {
 
     setTheme("light");
   };
+
+  if (!mounted) {
+    return null;
+  }
 
   return (
     <Button
