@@ -112,6 +112,7 @@
   "about": {
     "benefitsSection": {
       "title": "Por que trabalhar comigo",
+      "description": "Comunicação direta, decisões mais rápidas e uma forma mais simples de transformar sua ideia em uma solução",
       "benefits": [
         {
           "title": "Comunicação direta",
@@ -133,6 +134,7 @@
     },
     "workProcessSection": {
       "title": "Da primeira mensagem à entrega do projeto",
+      "description": "Processo claro desde o primeiro contato até a entrega e suporte contínuo",
       "items": [
         {
           "title": "Entendimento do projeto",
@@ -162,15 +164,10 @@
     }
   },
 
-  "faq": {
-    "title": "Perguntas frequentes",
-    "questions": []
-  },
-
   "contact": {
     "form": {
       "title": "Conte-me sua ideia",
-      "description": "Conte o que você precisa e um pouco sobre o seu projeto. Entrarei em contato com os próximos passos e como posso ajudar",
+      "description": "Conte o que você precisa e um pouco sobre o seu projeto. Entrarei em contato com os próximos passos e como posso ajudar em menos de 24 horas",
       "data": {
         "email": "E-mail",
         "phone": "WhatsApp",
@@ -219,9 +216,8 @@
         "minError": "Os detalhes do projeto devem ter pelo menos {min} caracteres",
         "maxError": "Os detalhes do projeto devem ter no máximo {max} caracteres"
       },
-      "submit": "Enviar mensagem"
+      "submit": "Enviar mensagem",
+      "availability": "Disponível para novos trabalhos"
     }
-  },
-
-  "footer": {}
+  }
 }

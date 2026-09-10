@@ -28,10 +28,15 @@ import {
 
 import { Textarea } from "@/components/ui/textarea";
 
-import { type ContactFormValues, createFormSchema } from "./formSchema";
+import {
+  type ContactFormValues,
+  createFormSchema,
+  PROJECT_DETAILS_MAX_LENGTH,
+} from "./formSchema";
 import { contact } from "@/data";
 import GitHubIcon from "@/assets/icons/GitHubIcon";
 import LinkedInIcon from "@/assets/icons/LinkedInIcon";
+import { ArrowUpRight } from "lucide-react";
 
 type ContactFormProps = {
   dictionary: ContactFormDictionary;
@@ -49,6 +54,20 @@ export default function ContactForm({ dictionary }: ContactFormProps) {
     },
   });
 
+  const projectTypeItems = Object.entries(dictionary.projectType.options).map(
+    ([value, label]) => ({
+      value,
+      label,
+    }),
+  );
+
+  const investmentItems = Object.entries(
+    dictionary.approximateInvestment.options,
+  ).map(([value, label]) => ({
+    value,
+    label,
+  }));
+
   function onSubmit(data: ContactFormValues) {
     console.log(data);
   }
@@ -62,60 +81,70 @@ export default function ContactForm({ dictionary }: ContactFormProps) {
           <p className="max-w-lg text-lg text-muted-foreground leading-relaxed">
             {dictionary.description}
           </p>
+
+          <p className="inline-flex items-center gap-2 text-primary mt-8 font-mono font-bold">
+            <span className="relative flex size-2">
+              <span className="hidden animate-ping absolute  size-full rounded-full bg-primary opacity-60 motion-safe:inline-flex" />
+              <span className="relative inline-flex size-2 rounded-full bg-primary" />
+            </span>
+            {dictionary.availability}
+          </p>
         </div>
 
         <div className="lg:col-start-2 lg:row-span-2 lg:row-start-1">
           <form onSubmit={form.handleSubmit(onSubmit)}>
             <FieldGroup>
-              <Controller
-                name="fullname"
-                control={form.control}
-                render={({ field, fieldState }) => (
-                  <Field data-invalid={fieldState.invalid}>
-                    <FieldLabel>{dictionary.fullname.label}</FieldLabel>
+              <div className="flex flex-col lg:flex-row gap-4">
+                <Controller
+                  name="fullname"
+                  control={form.control}
+                  render={({ field, fieldState }) => (
+                    <Field data-invalid={fieldState.invalid}>
+                      <FieldLabel>{dictionary.fullname.label}</FieldLabel>
 
-                    <Input
-                      {...field}
-                      id={field.name}
-                      autoComplete="name"
-                      placeholder={dictionary.fullname.placeholder}
-                      aria-label={dictionary.fullname.placeholder}
-                      aria-invalid={fieldState.invalid}
-                      className="h-11"
-                    />
+                      <Input
+                        {...field}
+                        id={field.name}
+                        autoComplete="name"
+                        placeholder={dictionary.fullname.placeholder}
+                        aria-label={dictionary.fullname.placeholder}
+                        aria-invalid={fieldState.invalid}
+                        size="lg"
+                      />
 
-                    {fieldState.invalid && (
-                      <FieldError errors={[fieldState.error]} />
-                    )}
-                  </Field>
-                )}
-              />
+                      {fieldState.invalid && (
+                        <FieldError errors={[fieldState.error]} />
+                      )}
+                    </Field>
+                  )}
+                />
 
-              <Controller
-                name="email"
-                control={form.control}
-                render={({ field, fieldState }) => (
-                  <Field data-invalid={fieldState.invalid}>
-                    <FieldLabel htmlFor={field.name}>
-                      {dictionary.email.label}
-                    </FieldLabel>
+                <Controller
+                  name="email"
+                  control={form.control}
+                  render={({ field, fieldState }) => (
+                    <Field data-invalid={fieldState.invalid}>
+                      <FieldLabel htmlFor={field.name}>
+                        {dictionary.email.label}
+                      </FieldLabel>
 
-                    <Input
-                      {...field}
-                      id={field.name}
-                      type="email"
-                      autoComplete="email"
-                      placeholder={dictionary.email.placeholder}
-                      aria-invalid={fieldState.invalid}
-                    />
+                      <Input
+                        {...field}
+                        id={field.name}
+                        type="email"
+                        autoComplete="email"
+                        placeholder={dictionary.email.placeholder}
+                        aria-invalid={fieldState.invalid}
+                        size="lg"
+                      />
 
-                    {fieldState.invalid && (
-                      <FieldError errors={[fieldState.error]} />
-                    )}
-                  </Field>
-                )}
-              />
-
+                      {fieldState.invalid && (
+                        <FieldError errors={[fieldState.error]} />
+                      )}
+                    </Field>
+                  )}
+                />
+              </div>
               <Controller
                 name="projectType"
                 control={form.control}
@@ -126,13 +155,15 @@ export default function ContactForm({ dictionary }: ContactFormProps) {
                     </FieldLabel>
 
                     <Select
+                      items={projectTypeItems}
                       name={field.name}
-                      value={field.value}
+                      value={field.value ?? null}
                       onValueChange={field.onChange}
                     >
                       <SelectTrigger
                         id={field.name}
                         aria-invalid={fieldState.invalid}
+                        size="lg"
                       >
                         <SelectValue
                           placeholder={dictionary.projectType.placeholder}
@@ -140,13 +171,11 @@ export default function ContactForm({ dictionary }: ContactFormProps) {
                       </SelectTrigger>
 
                       <SelectContent>
-                        {Object.entries(dictionary.projectType.options).map(
-                          ([value, label]) => (
-                            <SelectItem key={value} value={value}>
-                              {label}
-                            </SelectItem>
-                          ),
-                        )}
+                        {projectTypeItems.map(({ value, label }) => (
+                          <SelectItem key={value} value={value}>
+                            {label}
+                          </SelectItem>
+                        ))}
                       </SelectContent>
                     </Select>
 
@@ -167,13 +196,15 @@ export default function ContactForm({ dictionary }: ContactFormProps) {
                     </FieldLabel>
 
                     <Select
+                      items={investmentItems}
                       name={field.name}
-                      value={field.value}
+                      value={field.value ?? null}
                       onValueChange={field.onChange}
                     >
                       <SelectTrigger
                         id={field.name}
                         aria-invalid={fieldState.invalid}
+                        size="lg"
                       >
                         <SelectValue
                           placeholder={
@@ -183,9 +214,7 @@ export default function ContactForm({ dictionary }: ContactFormProps) {
                       </SelectTrigger>
 
                       <SelectContent>
-                        {Object.entries(
-                          dictionary.approximateInvestment.options,
-                        ).map(([value, label]) => (
+                        {investmentItems.map(({ value, label }) => (
                           <SelectItem key={value} value={value}>
                             {label}
                           </SelectItem>
@@ -215,17 +244,31 @@ export default function ContactForm({ dictionary }: ContactFormProps) {
                       rows={6}
                       placeholder={dictionary.projectDetails.placeholder}
                       aria-invalid={fieldState.invalid}
+                      className="max-h-40 overflow-y-auto scrollbar-none"
+                      maxLength={PROJECT_DETAILS_MAX_LENGTH}
                     />
 
-                    {fieldState.invalid && (
-                      <FieldError errors={[fieldState.error]} />
-                    )}
+                    <div className="flex items-center justify-between gap-4">
+                      <div>
+                        {fieldState.invalid && (
+                          <FieldError errors={[fieldState.error]} />
+                        )}
+                      </div>
+
+                      <span className="shrink-0 text-xs text-muted-foreground">
+                        {field.value.length}/{PROJECT_DETAILS_MAX_LENGTH}
+                      </span>
+                    </div>
                   </Field>
                 )}
               />
 
-              <Button type="submit" disabled={form.formState.isSubmitting}>
-                {dictionary.submit}
+              <Button
+                size="lg"
+                type="submit"
+                disabled={form.formState.isSubmitting}
+              >
+                {dictionary.submit} {<ArrowUpRight />}
               </Button>
             </FieldGroup>
           </form>

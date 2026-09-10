@@ -177,20 +177,34 @@ export default async function Home() {
           {/* About 1 */}
           <section
             id={APP_SECTIONS.benefits}
-            className="section max-w-225"
+            className="section"
             data-reveal-section
           >
-            <h2 data-reveal className="flex sm:justify-center">
-              <span className="block w-fit section-title">
-                {dict.about.benefitsSection.title}
-              </span>
-            </h2>
+            <div className="mx-auto max-w-225 flex flex-col sm:items-center">
+              <div className="flex flex-col items-center">
+                <h2 data-reveal>
+                  <span className="block w-fit section-title">
+                    {dict.about.benefitsSection.title}
+                  </span>
+                </h2>
 
-            <ul data-reveal className="grid grid-cols-1 gap-12 md:grid-cols-2">
+                <p
+                  data-reveal
+                  className="section-description text-center max-w-xl"
+                >
+                  {dict.about.benefitsSection.description}
+                </p>
+              </div>
+            </div>
+
+            <ul
+              data-reveal
+              className="grid grid-cols-1 gap-12 md:grid-cols-2 mt-2"
+            >
               {dict.about.benefitsSection.benefits.map(
                 ({ description, title }, index) => (
                   <li
-                    className="border-l-2 border-foreground pl-5 py-2"
+                    className="border-l border-muted-foreground pl-5 py-2"
                     key={index}
                   >
                     <div>
@@ -213,6 +227,10 @@ export default async function Home() {
               {dict.about.workProcessSection.title}
             </h2>
 
+            <p data-reveal className="section-description">
+              {dict.about.workProcessSection.description}
+            </p>
+
             <ol
               data-reveal
               className="grid gap-8 md:grid-cols-2 lg:grid-cols-3"
@@ -234,15 +252,17 @@ export default async function Home() {
           </section>
 
           {/* Contact */}
-          <section
-            id={APP_SECTIONS.contact}
-            className="section"
-            data-reveal-section
-          >
-            <div data-reveal>
-              <ContactForm dictionary={dict.contact.form} />
-            </div>
-          </section>
+          <div>
+            <section
+              id={APP_SECTIONS.contact}
+              className="section"
+              data-reveal-section
+            >
+              <div className="w-full" data-reveal>
+                <ContactForm dictionary={dict.contact.form} />
+              </div>
+            </section>
+          </div>
         </main>
       </AnimationContainer>
 

@@ -112,10 +112,11 @@
   "about": {
     "benefitsSection": {
       "title": "Why work with me",
+      "description": "Direct communication, faster decisions, and a simpler way to turn your idea into a solution",
       "benefits": [
         {
           "title": "Direct communication",
-          "description": "Talk directly with the person who responsible for building your solution"
+          "description": "Talk directly with the person responsible for building your solution"
         },
         {
           "title": "Faster decisions",
@@ -133,6 +134,7 @@
     },
     "workProcessSection": {
       "title": "From the first message to project delivery",
+      "description": "A clear process from the first conversation to delivery and ongoing support",
       "items": [
         {
           "title": "Project understanding",
@@ -162,15 +164,10 @@
     }
   },
 
-  "faq": {
-    "title": "Frequently asked questions",
-    "questions": []
-  },
-
   "contact": {
     "form": {
       "title": "Tell me your idea",
-      "description": "Tell me what you need and a little about your project. I'll get back to you with the next steps and how I can help",
+      "description": "Tell me what you need and a little about your project. I'll get back to you with the next steps and how I can help in under 24 hours",
       "data": {
         "email": "Email",
         "phone": "WhatsApp",
@@ -219,9 +216,8 @@
         "minError": "Project details should be at least {min} characters long",
         "maxError": "Project details should be at most {max} characters long"
       },
-      "submit": "Send message"
+      "submit": "Send message",
+      "availability": "Available for new work"
     }
-  },
-
-  "footer": {}
+  }
 }

@@ -7,8 +7,8 @@ import * as z from "zod";
 const FULLNAME_MIN_LENGTH = 3;
 const FULLNAME_MAX_LENGTH = 40;
 
-const PROJECT_DETAILS_MIN_LENGTH = 10;
-const PROJECT_DETAILS_MAX_LENGTH = 1000;
+export const PROJECT_DETAILS_MIN_LENGTH = 10;
+export const PROJECT_DETAILS_MAX_LENGTH = 1000;
 
 export type ProjectType = keyof ContactFormDictionary["projectType"]["options"];
 
