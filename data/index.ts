@@ -10,12 +10,13 @@ export const contact = {
   email: "victor.fmendes7@gmail.com",
   phone: {
     display: "19 98157-7937",
+    whatsapp: "5519981577937",
   },
   social: {
     github: "https://github.com/ImVictorM",
     linkedIn: "https://www.linkedin.com/in/victor-figueiredo-mendes/",
   },
-};
+} as const;
 
 export const APP_SECTIONS = {
   hero: "hero",

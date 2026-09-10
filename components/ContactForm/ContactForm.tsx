@@ -37,6 +37,7 @@ import { contact } from "@/data";
 import GitHubIcon from "@/assets/icons/GitHubIcon";
 import LinkedInIcon from "@/assets/icons/LinkedInIcon";
 import { ArrowUpRight } from "lucide-react";
+import { createWhatsAppMessage, createWhatsAppUrl } from "./whatsApp";
 
 type ContactFormProps = {
   dictionary: ContactFormDictionary;
@@ -69,7 +70,11 @@ export default function ContactForm({ dictionary }: ContactFormProps) {
   }));
 
   function onSubmit(data: ContactFormValues) {
-    console.log(data);
+    const message = createWhatsAppMessage(data, dictionary);
+
+    const whatsappUrl = createWhatsAppUrl(contact.phone.whatsapp, message);
+
+    window.open(whatsappUrl, "_blank", "noopener,noreferrer");
   }
 
   return (

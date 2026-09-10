@@ -217,7 +217,10 @@
         "maxError": "Os detalhes do projeto devem ter no máximo {max} caracteres"
       },
       "submit": "Enviar mensagem",
-      "availability": "Disponível para novos trabalhos"
+      "availability": "Disponível para novos trabalhos",
+      "whatsapp": {
+        "intro": "Olá! Estou entrando em contato através do seu site"
+      }
     }
   }
 }

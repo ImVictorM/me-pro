@@ -217,7 +217,10 @@
         "maxError": "Project details should be at most {max} characters long"
       },
       "submit": "Send message",
-      "availability": "Available for new work"
+      "availability": "Available for new work",
+      "whatsapp": {
+        "intro": "Hi! I'm contacting you through your website"
+      }
     }
   }
 }
