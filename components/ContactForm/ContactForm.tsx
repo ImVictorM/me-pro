@@ -87,7 +87,7 @@ export default function ContactForm({ dictionary }: ContactFormProps) {
             {dictionary.description}
           </p>
 
-          <p className="inline-flex items-center gap-2 text-primary mt-8 font-mono font-bold">
+          <p className="inline-flex items-center gap-2 text-primary mt-8 font-mono">
             <span className="relative flex size-2">
               <span className="hidden animate-ping absolute  size-full rounded-full bg-primary opacity-60 motion-safe:inline-flex" />
               <span className="relative inline-flex size-2 rounded-full bg-primary" />

@@ -83,7 +83,7 @@ export default async function Home() {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <LinkedInIcon className="size-6" />
+                  <LinkedInIcon className="size-5" />
                 </a>
 
                 <a
@@ -92,7 +92,7 @@ export default async function Home() {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <GitHubIcon className="size-6" />
+                  <GitHubIcon className="size-5" />
                 </a>
               </nav>
             </div>
