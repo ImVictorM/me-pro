@@ -36,8 +36,7 @@ export async function generateMetadata({
   const current = metadataByLocale[lang as keyof typeof metadataByLocale];
 
   return {
-    // TODO: add domain
-    // metadataBase: new URL("https://your-domain.com"),
+    metadataBase: new URL("https://victor-mendes.dev"),
 
     title: current.title,
 
