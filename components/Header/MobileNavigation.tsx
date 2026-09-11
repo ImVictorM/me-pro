@@ -54,14 +54,14 @@ export default function MobileNavigation({
           aria-hidden={!open}
           inert={!open}
         >
-          <div className="max-w-layout border-y pl-10 px-5 py-6 shadow-lg">
+          <div className="max-w-layout border-y px-5 py-6 shadow-lg">
             <nav>
               <ul className="flex flex-col ">
                 <li>
                   <Link
                     href={`#${APP_SECTIONS.services}`}
                     onClick={closeMenu}
-                    className="block py-4 font-medium hover:text-primary"
+                    className="block py-4 font-medium pl-10 rounded-lg hover:text-primary hover:bg-muted"
                     prefetch={false}
                   >
                     {dictionary.navigationList.services}
@@ -72,7 +72,7 @@ export default function MobileNavigation({
                   <Link
                     href={`#${APP_SECTIONS.projects}`}
                     onClick={closeMenu}
-                    className="block py-4 font-medium hover:text-primary"
+                    className="block py-4 font-medium pl-10 rounded-lg hover:text-primary hover:bg-muted"
                     prefetch={false}
                   >
                     {dictionary.navigationList.work}
@@ -83,7 +83,7 @@ export default function MobileNavigation({
                   <Link
                     href={`#${APP_SECTIONS.benefits}`}
                     onClick={closeMenu}
-                    className="block py-4 font-medium hover:text-primary"
+                    className="block py-4 font-medium pl-10 rounded-lg hover:text-primary hover:bg-muted"
                     prefetch={false}
                   >
                     {dictionary.navigationList.about}
@@ -94,7 +94,7 @@ export default function MobileNavigation({
                   <Link
                     href={`#${APP_SECTIONS.contact}`}
                     onClick={closeMenu}
-                    className="block py-4 font-medium hover:text-primary"
+                    className="block py-4 font-medium pl-10 rounded-lg hover:text-primary hover:bg-muted"
                     prefetch={false}
                   >
                     {dictionary.navigationList.contact}
@@ -103,9 +103,9 @@ export default function MobileNavigation({
               </ul>
             </nav>
 
-            <div className="flex justify-end items-center gap-4 mt-4">
-              <LanguageSwitcher />
-              <ThemeToggle />
+            <div className="flex justify-end items-center gap-8 mt-4">
+              <LanguageSwitcher size="lg" />
+              <ThemeToggle size="lg" />
             </div>
           </div>
         </div>

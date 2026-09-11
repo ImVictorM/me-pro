@@ -2,6 +2,10 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { ThemeProvider } from "next-themes";
 import "../globals.css";
+import { commonMeta, createJsonLd, seoByLocale } from "@/lib/seo";
+import { JsonLd } from "@/components/JsonLd";
+import { AvailableLocale } from "@/localization";
+import { hasLocale } from "./dictionaries";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -14,32 +18,16 @@ const geistMono = Geist_Mono({
   preload: false,
 });
 
-const metadataByLocale = {
-  "en-US": {
-    title: "Victor Mendes | Freelance Software Developer",
-    description:
-      "Freelance software developer building websites, web applications, mobile apps, and custom software.",
-  },
-
-  "pt-BR": {
-    title: "Victor Mendes | Desenvolvedor de Software Freelancer",
-    description:
-      "Desenvolvedor de software freelancer criando sites, aplicações web, aplicativos mobile e soluções personalizadas.",
-  },
-} as const;
-
 export async function generateMetadata({
   params,
 }: LayoutProps<"/[lang]">): Promise<Metadata> {
   const { lang } = await params;
 
-  const current = metadataByLocale[lang as keyof typeof metadataByLocale];
+  const current = seoByLocale[lang as keyof typeof seoByLocale];
 
   return {
-    metadataBase: new URL("https://victor-mendes.dev"),
-
+    metadataBase: new URL(commonMeta.prodUrl),
     title: current.title,
-
     description: current.description,
 
     alternates: {
@@ -55,15 +43,25 @@ export async function generateMetadata({
       title: current.title,
       description: current.description,
       url: `/${lang}`,
-      siteName: "Victor Mendes",
+      siteName: commonMeta.author,
       locale: lang === "pt-BR" ? "pt_BR" : "en_US",
       alternateLocale: lang === "pt-BR" ? ["en_US"] : ["pt_BR"],
+      images: [
+        {
+          url: current.ogImage,
+          width: 1200,
+          height: 630,
+          alt: current.ogImageAlt,
+          type: "image/png",
+        },
+      ],
     },
 
     twitter: {
       card: "summary_large_image",
       title: current.title,
       description: current.description,
+      images: [current.ogImage],
     },
 
     robots: {
@@ -73,11 +71,12 @@ export async function generateMetadata({
 
     authors: [
       {
-        name: "Victor Mendes",
+        name: commonMeta.author,
+        url: commonMeta.prodUrl,
       },
     ],
 
-    creator: "Victor Mendes",
+    creator: commonMeta.author,
   };
 }
 
@@ -86,6 +85,8 @@ export default async function RootLayout({
   params,
 }: LayoutProps<"/[lang]">) {
   const { lang } = await params;
+  const isLocaleValid = hasLocale(lang);
+  const jsonLd = isLocaleValid ? createJsonLd(lang as AvailableLocale) : null;
 
   return (
     <html
@@ -94,6 +95,8 @@ export default async function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
+        {jsonLd && <JsonLd data={jsonLd} />}
+
         <ThemeProvider disableTransitionOnChange attribute="class">
           {children}
         </ThemeProvider>

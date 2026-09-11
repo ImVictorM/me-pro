@@ -1,6 +1,7 @@
+import { ArrowRight } from "lucide-react";
+import Link from "next/link";
+
 import { Button } from "@/components/ui/button";
-import { getDictionary } from "./dictionaries";
-import { ScrollableWrapper, Header } from "@/components/Header";
 import {
   Card,
   CardContent,
@@ -8,16 +9,18 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-
+import { ScrollableWrapper, Header } from "@/components/Header";
+import { ProjectDialogCard } from "@/components/ProjectDialogCard";
 import { ContactForm } from "@/components/ContactForm";
-import { APP_SECTIONS, contact, copyrightYear } from "@/data";
+import { AnimationContainer } from "@/components/AnimationContainer";
+
 import LinkedInIcon from "@/assets/icons/LinkedInIcon";
 import GitHubIcon from "@/assets/icons/GitHubIcon";
-import { AnimationContainer } from "@/components/AnimationContainer";
-import Link from "next/link";
-import { ArrowRight } from "lucide-react";
+
+import { APP_SECTIONS, contact, copyrightYear } from "@/data";
 import { ProjectId, PROJECTS } from "@/data/projects";
-import { ProjectDialogCard } from "@/components/ProjectDialogCard";
+
+import { getDictionary } from "./dictionaries";
 
 export default async function Home() {
   const dict = await getDictionary();
@@ -40,14 +43,17 @@ export default async function Home() {
 
           <section
             id={APP_SECTIONS.hero}
-            className="section min-h-screen flex flex-col justify-center gap-8"
+            className="section min-h-screen flex flex-col justify-center gap-14 sm:gap-8"
           >
-            <h1 data-reveal-hero className="text-7xl font-bold leading-none">
+            <h1
+              data-reveal-hero
+              className="text-6xl font-bold leading-none sm:text-7xl"
+            >
               {dict.hero.title}
             </h1>
             <p
               data-reveal-hero
-              className="max-w-2xl text-2xl text-muted-foreground leading-relaxed font-light"
+              className="max-w-2xl t text-xl text-muted-foreground leading-relaxed font-light sm:text-2xl"
             >
               {dict.hero.subtitle}
             </p>
@@ -118,7 +124,7 @@ export default async function Home() {
             >
               {dict.services.items.map((service, index) => (
                 <li key={index}>
-                  <Card className="h-full bg-card/60 border border-border transition-colors hover:border-primary/60">
+                  <Card className="h-full bg-card dark:bg-card/60 border border-border transition-colors hover:border-primary/60">
                     <CardHeader>
                       <div className="mb-2">
                         <span className="font-mono text-sm text-primary">
