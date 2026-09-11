@@ -118,7 +118,7 @@ export default async function Home() {
             >
               {dict.services.items.map((service, index) => (
                 <li key={index}>
-                  <Card className="h-full bg-card/60 border border-border transition-colors hover:border-primary/60">
+                  <Card className="h-full bg-card dark:bg-card/60 border border-border transition-colors hover:border-primary/60">
                     <CardHeader>
                       <div className="mb-2">
                         <span className="font-mono text-sm text-primary">
