@@ -10,7 +10,13 @@ const localeLabels: Record<AvailableLocale, string> = {
   "pt-BR": "PT",
 };
 
-export default function LanguageSwitcher({}) {
+type LanguageSwitcherProps = {
+  size?: "default" | "lg";
+};
+
+export default function LanguageSwitcher({
+  size = "default",
+}: LanguageSwitcherProps) {
   const pathname = usePathname();
 
   const currentLocale = locales.find(
@@ -27,7 +33,10 @@ export default function LanguageSwitcher({}) {
 
   return (
     <nav aria-label="language">
-      <ul className="flex items-center gap-1 text-xs">
+      <ul
+        data-size={size}
+        className="flex items-center gap-1 data-[size=default]:text-xs data-[size=lg]:text-base"
+      >
         {locales.map((locale, index) => {
           const active = locale === currentLocale;
 
